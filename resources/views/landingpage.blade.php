@@ -38,13 +38,13 @@
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li class="mx-4"><a>Home</a></li>
-      <li class="mx-4"><a href="">Features</a></li>
-      <li class="mx-4"><a>About</a></li>
+      <li class="mx-4 font-quicksand"><a>Home</a></li>
+      <li class="mx-4 font-quicksand"><a href="">Features</a></li>
+      <li class="mx-4 font-quicksand"><a>About Page</a></li>
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn bg-[#172e45] text-white rounded-full px-10">Sign Up</a>
+    <a class="btn bg-[#172e45] text-white rounded-full px-10 font-quicksand font-bold">Sign Up</a>
   </div>
 </div>
 </body>
