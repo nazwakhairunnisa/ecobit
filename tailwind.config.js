@@ -12,6 +12,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
+                quicksand: ['Quicksand', 'sans-serif'],
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
