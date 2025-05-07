@@ -32,7 +32,7 @@
     </div>
     <a class="w-25 ml-4">
         <div class="logo-img">
-            <img src="{{ asset('build/assets/img/logo.png') }}" alt="">
+            <img src="{{ asset('assets/img/logo.png') }}" alt="">
         </div>
     </a>
   </div>
