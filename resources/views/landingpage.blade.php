@@ -40,7 +40,7 @@
     <ul class="menu menu-horizontal px-1">
       <li class="mx-4"><a>Home</a></li>
       <li class="mx-4"><a href="">Features</a></li>
-      <li class="mx-4"><a>About</a></li>
+      <li class="mx-4"><a>About page</a></li>
     </ul>
   </div>
   <div class="navbar-end">
