@@ -8,16 +8,16 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
     <!-- cdn template daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar bg-base-100 shadow-sm">
+    <nav class="navbar sticky top-0 z-100 m-0 p-0">
+        <div class="navbar bg-base-100 shadow-lg pb-3 ">
             <div class="navbar-start">
                 <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -26,9 +26,9 @@
                 <ul
                     tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="" class="font-quicksand">Home</a></li>
+                    <li><a href="" class="font-quicksand">Features</a></li>
+                    <li><a href="" class="font-quicksand">About</a></li>
                 </ul>
                 </div>
                 <a class="w-25 ml-4">
@@ -39,9 +39,9 @@
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                <li class="mx-4"><a href="">Home</a></li>
-                <li class="mx-4"><a href="">Features</a></li>
-                <li class="mx-4"><a href="">About</a></li>
+                <li class="mx-4"><a href="" class="text-base font-quicksand">Home</a></li>
+                <li class="mx-4"><a href="" class="text-base font-quicksand">Features</a></li>
+                <li class="mx-4"><a href="" class="text-base font-quicksand">About</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -49,8 +49,6 @@
             </div>
         </div>
     </nav>
-    
     @yield('content')
-
 </body>
 </html>

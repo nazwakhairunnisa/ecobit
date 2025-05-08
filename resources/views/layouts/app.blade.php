@@ -17,7 +17,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar bg-base-100 shadow-lg">
             <div class="navbar-start">
                 <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -40,8 +40,8 @@
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
                 <li class="mx-4"><a href="">Home</a></li>
-                <li class="mx-4"><a href="">Features</a></li>
-                <li class="mx-4"><a href="">About</a></li>
+                <li class="mx-4"><a href="">Plan</a></li>
+                <li class="mx-4"><a href="">My Plan</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -55,14 +55,8 @@
                     </div>
                     <ul
                         tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li>
-                        <a class="justify-between">
-                            Profile
-                            <span class="badge">New</span>
-                        </a>
-                        </li>
-                        <li><a>Settings</a></li>
+                        class="menu menu-sm dropdown-content bg-green-300 rounded-box z-1 mt-3 w-30 p-2 shadow">
+                        <li><a href="" class="">Edit Profile</a></li>
                         <li><a>Logout</a></li>
                     </ul>
                 </div>
@@ -72,8 +66,6 @@
     
     @yield('content')
 
-    <footer>
-        // footer nya taro sini nanti
-    </footer>
+
 </body>
 </html>
