@@ -12,6 +12,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
+                quicksand: ['Quicksand', 'sans-serif'],
+                fredoka: ['Fredoka', 'sans-serif'],
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
