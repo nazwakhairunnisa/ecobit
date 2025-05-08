@@ -17,9 +17,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/thankyou', function () {
-    return view('thankyou');
-});
 
 Route::get('/faq', function () {
     $faqs = [
