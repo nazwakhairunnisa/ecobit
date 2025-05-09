@@ -24,17 +24,47 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-});
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+
+Route::middleware([ 'auth', 'verified',])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+Route::middleware(['auth', 'verified'])->get('/select-focus', function () {
+    $fokusList = [
+        'Hemat Energi',
+        'Transportasi Ramah Lingkungan',
+        'Mengurangi Sampah Plastik',
+        'Pohon dan Alam',
+        'Manajemen Air'
+    ];
+
+    return view('focus-selection', compact('fokusList'));
+})->name('select.focus');
+
+Route::middleware(['auth', 'verified'])->post('/select-focus', function (\Illuminate\Http\Request $request) {
+    $request->validate([
+        'focus' => 'required|string',
+    ]);
+
+    // $user = auth()->user();
+    // $user->focus_selected = true;
+    // $user->save();
+
+    return redirect()->route('dashboard');
+})->name('focus.submit');
+
 
 
 Route::get('/faq', function () {

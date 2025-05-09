@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <title>Log In</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Fredoka from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Franxurter';
-            src: url('/font/Franxurter-w11D9.ttf') format('truetype');
-        }
-
         body {
-            font-family: 'Franxurter', sans-serif;
+            font-family: 'Fredoka', sans-serif;
         }
     </style>
 </head>
@@ -22,10 +19,12 @@
         <img src="{{ asset('images/wave.png') }}" alt="Wave Background" class="w-full">
     </div>
 
-    <!-- Logo (Separated from the main content) -->
-    <div class="absolute top-4 left-8 z-20">
-        <div class="text-3xl text-[#1E293B]">ECOBIT</div>
-    </div>
+    <!-- Logo -->
+    <nav class="absolute top-0 left-0 w-full z-20 flex items-center justify-between px-8 py-4 bg-transparent fixed top-0 left-0 z-50">
+        <div>
+            <img src="{{ asset('assets/img/logo.png') }}" alt="ECOBIT Logo" class="h-12">
+        </div>
+    </nav>
 
     <div class="z-10 w-full max-w-6xl flex justify-between items-center px-8">
         <!-- Left Section -->
