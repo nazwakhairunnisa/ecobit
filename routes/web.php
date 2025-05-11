@@ -40,6 +40,11 @@ Route::get('/faq', function () {
     return view('faq', compact('faqs'));
 });
 
+Route::get('/plan', function () {
+    return view('components.plan');
+});
+
+
 
 
 require __DIR__.'/auth.php';
