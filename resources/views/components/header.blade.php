@@ -1,4 +1,4 @@
-<section id="header">
+<section id="header m-0 p-0">
     <div class="hero bg-base-200 min-h-screen">
         <div class="hero-content w-full flex flex-col lg:flex-row-reverse justify-between items-center px-8 lg:px-20">
             <img src="{{ asset('assets/img/hero-img.png') }}" class="max-w-lg"/>
@@ -12,9 +12,9 @@
                 excepturi exercitationem quasi. In deleniti eaque aut repudiandae <br>
                 et a id nisi.
             </p>
-            <div class="flex items-center flex-row-reverse gap-4">
-                <button class="btn bg-[#d8eedb] text-[#172e45] rounded-full">Login</button>
+            <div class="flex items-center justify-end gap-4">
                 <button class="btn bg-[#172e45] text-white rounded-full">Get Started</button>
+                <button class="btn bg-[#d8eedb] text-[#172e45] rounded-full">Login</button>
             </div>
             </div>
         </div>
