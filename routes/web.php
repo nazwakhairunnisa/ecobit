@@ -19,6 +19,10 @@ Route::get('/plan', function () {
     return view('components.plan');
 });
 
+Route::get('/myplan', function () {
+    return view('components.myplan');
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
