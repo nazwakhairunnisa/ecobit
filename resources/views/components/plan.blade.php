@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Plan Page</title>
-</head>
-<body>
+@extends('layouts.app')
 
+@php
+    $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bisa diapus)
+@endphp
+
+@section('content')
     <div class="plan-section">
     <!-- Filter -->
     <div class="filter-bar">
@@ -114,7 +113,5 @@
         <p class="plan-desc">magna nibh lacinia purus, id luctus urna enim non neque magna nibh lacinia purus...</p>
         <a class="plan-link" href="#">SEE MORE >></a>
     </div>
+@endsection
 
-
-</body>
-</html>
