@@ -1,3 +1,4 @@
+add-page-plan
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +94,14 @@
 </head>
 <body>
 
+@extends('layouts.app')
+main
+
+@php
+    $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bisa diapus)
+@endphp
+
+@section('content')
     <div class="plan-section">
     <!-- Filter -->
     <div class="filter-bar">
@@ -202,7 +211,9 @@
         <p class="plan-desc">magna nibh lacinia purus, id luctus urna enim non neque magna nibh lacinia purus...</p>
         <a class="plan-link" href="#">SEE MORE >></a>
     </div>
+@endsection
 
+add-page-plan
     <!-- card plan WATER -->
     <div class="plan-card water">
         <div class="plan-header">
@@ -249,3 +260,5 @@
         });
     });
 </script>
+
+main

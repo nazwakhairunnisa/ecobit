@@ -11,6 +11,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/getplan', function () {
+    return view('components.getplan');
+});
+
+Route::get('/plan', function () {
+    return view('components.plan');
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
@@ -21,9 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/plan1', function () {
-    return view('plan.plan1');
-});
+// Route::get('/plan1', function () {
+//     return view('plan.plan1');
+// });
 
 
 Route::get('/faq', function () {
