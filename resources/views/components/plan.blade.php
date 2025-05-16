@@ -18,8 +18,6 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
             background-color: #ffffff;
             color: #1c2f3c;
             margin: 0;
-            padding: 0;
-            /* padding: 20px; */
         }
 
         .filter-bar {
@@ -32,7 +30,7 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
 
         .filter-btn {
             padding: 5px 40px;
-            margin: 0 40px;
+            margin: 0 20px;
             min-width: 175px;
             border: 1px solid #1c2f3c;
             border-radius: 50px;
@@ -49,7 +47,7 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
         }
 
         .plan-section {
-            margin-top: 20px;
+            margin-top: 0px;
             display: flex;
             flex-direction: column;
             gap: 20px;
