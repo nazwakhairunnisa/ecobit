@@ -1,4 +1,10 @@
-add-page-plan
+@extends('layouts.app')
+
+@php
+$isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bisa diapus)
+@endphp
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +18,8 @@ add-page-plan
             background-color: #ffffff;
             color: #1c2f3c;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            /* padding: 20px; */
         }
 
         .filter-bar {
@@ -94,15 +101,7 @@ add-page-plan
 </head>
 <body>
 
-@extends('layouts.app')
-main
-
-@php
-    $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bisa diapus)
-@endphp
-
-@section('content')
-    <div class="plan-section">
+    <div class="plan-section p-20">
     <!-- Filter -->
     <div class="filter-bar">
         <button class="filter-btn" data-filter="tree">TREE</button>
@@ -211,9 +210,7 @@ main
         <p class="plan-desc">magna nibh lacinia purus, id luctus urna enim non neque magna nibh lacinia purus...</p>
         <a class="plan-link" href="#">SEE MORE >></a>
     </div>
-@endsection
-
-add-page-plan
+    
     <!-- card plan WATER -->
     <div class="plan-card water">
         <div class="plan-header">
@@ -261,4 +258,4 @@ add-page-plan
     });
 </script>
 
-main
+@endsection
