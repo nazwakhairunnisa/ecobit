@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
- <!-- @include('components.plan') -->
+    @include('components.plan')
 @endsection

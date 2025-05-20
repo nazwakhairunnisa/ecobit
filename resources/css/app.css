@@ -1,8 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Tambahan custom class untuk background bergelombang */
-.clip-wave {
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 95%, 50% 90%, 25% 95%, 0 85%);
-}

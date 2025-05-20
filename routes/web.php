@@ -32,6 +32,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/plan1', function () {
+    return view('plan.plan1');
+});
+
 
 
 
@@ -84,6 +88,11 @@ Route::get('/faq', function () {
     ];
     return view('faq', compact('faqs'));
 });
+
+Route::get('/plan', function () {
+    return view('components.plan');
+});
+
 
 
 
