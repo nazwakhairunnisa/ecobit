@@ -1,8 +1,5 @@
-@extends('layouts.app')
-
-@section('content')
-  <section id="footer">
-    <div class="min-h-screen bg-white">
+<section id="footer">
+    <div class="min-h-screen bg-white mt-10">
       
       {{-- Thank You Section --}}
       <div class="grid grid-cols-1 md:grid-cols-2">
@@ -81,4 +78,3 @@
       </footer>
     </div>
   </section>
-@endsection

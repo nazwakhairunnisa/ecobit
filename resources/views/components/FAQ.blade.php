@@ -1,8 +1,5 @@
-@extends('layouts.app') 
-
-@section('content')
     <!--FAQ-->
-    <section class="relative h-[300px] w-full ">
+    <section class="relative h-[300px] w-full mt-15">
     <img src="{{ asset('assets/img/FAQ.png') }}"/>
     <div class="absolute inset-x-0 top-1/4 flex items-center justify-center">
         <h1 class="text-white text-4xl font-bold px-6 py-2 bg-[#172e45] rounded-xl shadow-md">FAQ</h1>
@@ -30,8 +27,3 @@
     </div>
 </section>
 
-        </section>
-            </div>
-        </div>
-    </section>
-@endsection
