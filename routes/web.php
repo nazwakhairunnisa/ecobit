@@ -7,8 +7,23 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::middleware('guest')->group(function () {
+    Route::get('/features', function () {
+        return view('components.features');
+    })->name('features');
+
+    Route::get('/about', function () {
+        return view('components.about');
+    })->name('about');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
+});
+
+Route::get('/homepage', function () {
+    return view('homepage');
 });
 
 Route::get('/getplan', function () {

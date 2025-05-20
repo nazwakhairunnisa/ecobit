@@ -32,7 +32,7 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
 
         .filter-btn {
             padding: 5px 40px;
-            margin: 0 40px;
+            margin: 0 20px;
             min-width: 175px;
             border: 1px solid #1c2f3c;
             border-radius: 50px;
@@ -101,9 +101,9 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
 </head>
 <body>
 
-    <div class="plan-section p-20">
+    <div class="plan-section px-20">
     <!-- Filter -->
-    <div class="filter-bar">
+    <div class="filter-bar ">
         <button class="filter-btn" data-filter="tree">TREE</button>
         <button class="filter-btn" data-filter="energy">ENERGY</button>
         <button class="filter-btn" data-filter="vehicle">VEHICLE</button>
