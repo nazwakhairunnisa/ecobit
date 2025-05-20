@@ -60,7 +60,13 @@ Route::get('/plan', function () {
     return view('components.plan');
 });
 
+Route::get('/footer', function () {
+    return view('components.footer');
+});
 
+Route::get('/FAQ', function () {
+    return view('components.FAQ');
+});
 
 
 require __DIR__.'/auth.php';
