@@ -32,9 +32,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/plan1', function () {
-    return view('plan.plan1');
-});
+// Route::get('/plan1', function () {
+//     return view('plan.plan1');
+// });
 
 
 
