@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 Route::middleware('guest')->group(function () {
     Route::get('/', function () {
@@ -18,10 +19,17 @@ Route::middleware('guest')->group(function () {
     })->name('features');
 });
 
-Route::middleware([ 'auth', 'verified',])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        $user = auth()->user();
+
+    // Cek apakah user belum memilih fokus
+    if (!$user->focus_selected) {
+        return redirect()->route('select.focus');
+    }
+
+    return view('dashboard');
+})->name('dashboard');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -42,6 +50,12 @@ Route::middleware([ 'auth', 'verified',])->group(function () {
         $request->validate([
             'focus' => 'required|string',
         ]);
+
+        $user = auth()->user();
+        $user->focus = $request->focus;
+        $user->focus_selected = true;
+        $user->save();
+
         return redirect()->route('dashboard');
     })->name('focus.submit');
 
