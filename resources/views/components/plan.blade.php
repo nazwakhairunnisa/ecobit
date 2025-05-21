@@ -12,7 +12,6 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
     <title>Plan Page</title>
 
      <style>
-        /* 👇 Ini semua CSS dari aku, ditempelin langsung */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #ffffff;
