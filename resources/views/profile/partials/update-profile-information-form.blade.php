@@ -1,4 +1,4 @@
-<form id="profile-info-form" method="post" action="{{ route('profile.update') }}" class="profile-form">
+<form id="profile-info-form" method="post" action="{{ route('profile.update') }}" enctype="multipart/form-data" class="profile-form">
     @csrf
     @method('patch')
 
@@ -16,14 +16,6 @@
         <input id="email" name="email" type="email" class="profile-input"
                value="{{ old('email', $user->email) }}" required autocomplete="email">
         <x-input-error :messages="$errors->get('email')" class="mt-2" />
-    </div>
-
-    <!-- Username -->
-    <div class="input-group">
-        <label for="username">{{ __('Username') }}</label>
-        <input id="username" name="username" type="text" class="profile-input"
-               value="{{ old('username', $user->username) }}" required autocomplete="username">
-        <x-input-error :messages="$errors->get('username')" class="mt-2" />
     </div>
 
     <div class="form-actions">
