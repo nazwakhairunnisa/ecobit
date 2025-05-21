@@ -21,12 +21,12 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
-        $user = auth()->user();
+    //     $user = auth()->user();
 
-    // Cek apakah user belum memilih fokus
-    if (!$user->focus_selected) {
-        return redirect()->route('select.focus');
-    }
+    // // Cek apakah user belum memilih fokus
+    // if (!$user->focus_selected) {
+    //     return redirect()->route('select.focus');
+    // }
 
     return view('dashboard');
 })->name('dashboard');
@@ -51,10 +51,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
             'focus' => 'required|string',
         ]);
 
-        $user = auth()->user();
-        $user->focus = $request->focus;
-        $user->focus_selected = true;
-        $user->save();
+    //     $user = auth()->user();
+    //     $user->focus = $request->focus;
+    //     $user->focus_selected = true;
+    //     $user->save();
 
         return redirect()->route('dashboard');
     })->name('focus.submit');
