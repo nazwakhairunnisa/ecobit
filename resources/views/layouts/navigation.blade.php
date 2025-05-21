@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content bg-green-300 rounded-box z-1 mt-3 w-30 p-2 shadow">
-                        <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
+                        <li><a href="{{ route('profile.show') }}":active="request()->routeIs('profile.show')">Profile</a></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                     </ul>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

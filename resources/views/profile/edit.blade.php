@@ -41,20 +41,27 @@
                 </p>
                 @include('profile.partials.delete-user-form')
             </div>
+
+            <div class="p-4 bg-yellow-100">
+                @if(isset($user))
+                    User data available: {{ $user->name }}
+                @else
+                    No user data!
+                @endif
+            </div>
         </div>
     </div>
 
     <script>
-        // Avatar preview script
-        document.getElementById('avatar-upload')?.addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('avatar-preview').src = e.target.result;
-                }
-                reader.readAsDataURL(file);
+    document.getElementById('avatar-upload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('avatar-preview').src = e.target.result;
             }
-        });
-    </script>
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
 </x-app-layout>

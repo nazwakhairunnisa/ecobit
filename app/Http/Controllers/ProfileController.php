@@ -8,12 +8,21 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Storage; 
 
 class ProfileController extends Controller
 {
     /**
      * Display the user's profile form.
      */
+    public function show(Request $request): View
+    {
+        $user = $request->user();
+        return view('profile.show', [
+            'user' => $user,
+        ]);
+    }
+
     public function edit(Request $request): View
     {
         return view('profile.edit', [
