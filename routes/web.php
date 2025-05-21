@@ -2,65 +2,58 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
-Route::get('/', function () {
-    return view('landingpage');
+Route::middleware('guest')->group(function () {
+    Route::get('/', function () {
+        return view('landingpage');
+    })->name('landing');
+
+    Route::get('/about', function () {
+        return view('components.about');
+    })->name('about');
+
+    Route::get('/features', function () {
+        return view('components.features');
+    })->name('features');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+Route::middleware([ 'auth', 'verified',])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::get('/getplan', function () {
-    return view('components.getplan');
-});
-
-Route::get('/plan', function () {
-    return view('components.plan');
-});
-
-Route::get('/myplan', function () {
-    return view('components.myplan');
-});
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/select-focus', function () {
+        $fokusList = [
+            'Hemat Energi',
+            'Transportasi Ramah Lingkungan',
+            'Mengurangi Sampah Plastik',
+            'Pohon dan Alam',
+            'Manajemen Air'
+        ];
+        return view('focus-selection', compact('fokusList'));
+    })->name('select.focus');
+
+    Route::post('/select-focus', function (\Illuminate\Http\Request $request) {
+        $request->validate([
+            'focus' => 'required|string',
+        ]);
+        return redirect()->route('dashboard');
+    })->name('focus.submit');
+
+    Route::get('/plan', function () {
+        return view('components.plan');
+    })->name('plans');
+    
+    Route::get('/myplan', function () {
+        return view('components.myplan');
+    })->name('myplan');
 });
-
-// Route::get('/plan1', function () {
-//     return view('plan.plan1');
-// });
-
-
-Route::get('/faq', function () {
-    $faqs = [
-        [
-            'question' => 'inter per fermentum eget ?',
-            'answer' => 'Integer tempus augue id enim tristique, et dapibus sapien ultricies. Quisque facilisis enim nec dui rhoncus',
-        ],
-        [
-            'question' => 'inter per fermentum eget ?',
-            'answer' => 'Integer tempus augue id enim tristique, et dapibus sapien ultricies. Quisque facilisis enim nec dui rhoncus',
-        ],
-        [
-            'question' => 'inter per fermentum eget ?',
-            'answer' => 'Integer tempus augue id enim tristique, et dapibus sapien ultricies. Quisque facilisis enim nec dui rhoncus',
-        ],
-    ];
-    return view('faq', compact('faqs'));
-});
-
-Route::get('/plan', function () {
-    return view('components.plan');
-});
-
-
 
 
 require __DIR__.'/auth.php';

@@ -1,4 +1,10 @@
-     @include('layouts.app')
+@extends('layouts.app')
+
+@php
+$isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bisa diapus)
+@endphp
+
+@section('content')
 
    <!-- Content -->
 <main class="p-6">
@@ -71,6 +77,5 @@
 
             </div>
         </div>
-    </main>
-</body>
-</html>
+</main>
+@endsection

@@ -98,9 +98,9 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
 </head>
 <body>
 
-    <div class="plan-section p-20">
+    <div class="plan-section px-20">
     <!-- Filter -->
-    <div class="filter-bar">
+    <div class="filter-bar ">
         <button class="filter-btn" data-filter="tree">TREE</button>
         <button class="filter-btn" data-filter="energy">ENERGY</button>
         <button class="filter-btn" data-filter="vehicle">VEHICLE</button>
