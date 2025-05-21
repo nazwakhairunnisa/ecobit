@@ -16,12 +16,8 @@
                 et a id nisi.
             </p>
             <div class="flex items-center justify-end gap-4">
-                <a href="http://127.0.0.1:8000/register">
                     <button class="btn bg-[#172e45] text-white rounded-full">Get Started</button>
-                </a>
-                <a href="http://127.0.0.1:8000/login">
                     <button class="btn bg-[#d8eedb] text-[#172e45] rounded-full">Login</button>
-                </a>
             </div>
             </div>
         </div>
