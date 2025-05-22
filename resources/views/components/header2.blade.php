@@ -7,8 +7,8 @@
             <div>
                 <!-- <div class="py-4 px-7 bg-[#172e45] text-white rounded-2xl inline-block">
                     </div> -->
-                <h1 class="text-white rounded-3xl text-6xl font-bold" style="text-shadow: 2px 2px 8px #000000;">BIT BY BIT</h1>
-                <h1 class="text-white rounded-2xl text-5xl font-bold pl-35" style="text-shadow: 2px 2px 8px #000000;">DAY BY DAY</h1>
+                <h1 class="text-white rounded-3xl text-6xl font-bold" style="text-shadow: 2px 2px 8px #000000;" data-aos="fade-left" data-aos-duration="1400">BIT BY BIT</h1>
+                <h1 class="text-white rounded-2xl text-5xl font-bold pl-35" style="text-shadow: 2px 2px 8px #000000;" data-aos="fade-right" data-aos-duration="1400">DAY BY DAY</h1>
 
             <p class="py-5 text-xl md:text-xl text-white text-justify" style="text-shadow: 2px 2px 4px #000000;">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
