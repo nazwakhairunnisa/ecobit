@@ -1,5 +1,5 @@
 <section id="footer">
-    <div class="min-h-screen bg-white mt-10">
+    <div class="bg-white mt-10">
       
       {{-- Thank You Section --}}
       <div class="grid grid-cols-1 md:grid-cols-2">
@@ -25,7 +25,7 @@
             <img src="{{ asset('assets/img/footer2.png') }}" class="mx-auto mb-1 w-48 h-auto" alt="Footer Logo">
           </div>
 
-          <div class="h-[2px] w-[243%] bg-white mt-0 mb-1"></div>
+          <div class="h-[1px] w-[243%] bg-white mt-0 mb-1"></div>
 
           <p class="font-bold text-center">
             ACME Industries Ltd.<br />

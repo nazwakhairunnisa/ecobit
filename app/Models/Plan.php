@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plan extends Model
 {
-    protected $fillable = ['focus_area_id', 'title', 'description', 'plan_details'];
+    protected $fillable = ['focus_area_id', 'title', 'plan_details'];
 
     public function focusArea()
     {

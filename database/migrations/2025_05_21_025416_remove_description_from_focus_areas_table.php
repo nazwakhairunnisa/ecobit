@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('plans', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('focus_area_id')->constrained()->onDelete('cascade');
-            $table->string('title');
-            $table->text('plan_details')->nullable();
-            $table->timestamps();
+        Schema::table('focus_areas', function (Blueprint $table) {
+            $table->dropColumn('description');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('plans');
+        Schema::table('focus_areas', function (Blueprint $table) {
+            $table->text('description')->nullable();
+        });
     }
 };

@@ -15,9 +15,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
     @include('layouts.navigation')
+    @include('components.header2')
     
+    <main class="flex-grow">
     @yield('content')
+    </main>
+
+    @include('components.footer')
 </body>
 </html>
