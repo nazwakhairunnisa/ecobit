@@ -19,9 +19,11 @@
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
     @include('layouts.navigation')
+    @include('components.header2')
     
+    <main class="flex-grow">
     @yield('content')
 
     <!-- AOS JS -->
@@ -29,5 +31,9 @@
     <script>
         AOS.init();
     </script>
+
+    </main>
+
+    @include('components.footer')
 </body>
 </html>

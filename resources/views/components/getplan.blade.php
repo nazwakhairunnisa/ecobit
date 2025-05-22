@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@php
-$isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bisa diapus)
-@endphp
-
 @section('content')
 <div class="header w-full flex items-center justify-center relative bg-cover bg-center" 
 style="background-image: url('{{ asset('assets/img/banner.png') }}');">
