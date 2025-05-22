@@ -12,14 +12,11 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
     <title>Plan Page</title>
 
      <style>
-        /* 👇 Ini semua CSS dari aku, ditempelin langsung */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #ffffff;
             color: #1c2f3c;
             margin: 0;
-            padding: 0;
-            /* padding: 20px; */
         }
 
         .filter-bar {
@@ -49,7 +46,7 @@ $isLoggedIn = true; // anggap aja user dah login (ntar kalo dah siap frontend bi
         }
 
         .plan-section {
-            margin-top: 20px;
+            margin-top: 0px;
             display: flex;
             flex-direction: column;
             gap: 20px;
