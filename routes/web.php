@@ -66,6 +66,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/myplan', function () {
         return view('components.myplan');
     })->name('myplan');
+
+    Route::get('/artikel', function () {
+    return view('artikel');
+    })->name('artikel');
 });
 
 
