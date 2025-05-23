@@ -18,6 +18,8 @@
     
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
 </head>
 <body class="min-h-screen flex flex-col">
     @include('layouts.navigation')
@@ -31,9 +33,7 @@
     <script>
         AOS.init();
     </script>
-
     </main>
-
     @include('components.footer')
 </body>
 </html>
