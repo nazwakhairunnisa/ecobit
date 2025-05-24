@@ -3,21 +3,21 @@
 
      <div class="card z-50 w-full bg-white/30 backdrop-blur-md shadow-lg rounded-lg mx-20 pt-5">
      <div class="hero-content w-full flex flex-col lg:flex-row-reverse justify-between items-center px-8 lg:px-20">
-            <img src="{{ asset('assets/img/hero-img.png') }}" class="max-w-lg"/>
+            <img src="{{ asset('assets/img/hero-img.png') }}" class="max-w-lg" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200"/>
             <div>
                 <!-- <div class="py-4 px-7 bg-[#172e45] text-white rounded-2xl inline-block">
                     </div> -->
-                <h1 class="text-white rounded-3xl text-6xl font-bold" style="text-shadow: 2px 2px 8px #000000;" data-aos="fade-left" data-aos-duration="1400">BIT BY BIT</h1>
-                <h1 class="text-white rounded-2xl text-5xl font-bold pl-35" style="text-shadow: 2px 2px 8px #000000;" data-aos="fade-right" data-aos-duration="1400">DAY BY DAY</h1>
+                <h1 class="text-white rounded-3xl text-6xl font-bold" style="text-shadow: 2px 2px 8px #000000;" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200" >BIT BY BIT</h1>
+                <h1 class="text-white rounded-2xl text-5xl font-bold pl-35" style="text-shadow: 2px 2px 8px #000000;" data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">DAY BY DAY</h1>
 
-            <p class="py-5 text-xl md:text-xl text-white text-justify" style="text-shadow: 2px 2px 4px #000000;">
+            <p class="py-5 text-xl md:text-xl text-white text-justify" style="text-shadow: 2px 2px 4px #000000;" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
                 excepturi exercitationem quasi. In deleniti eaque aut repudiandae
                 et a id nisi.
             </p>
             <div class="flex items-center justify-end gap-4">
-                <a href="{{ route('register') }}"><button class="btn bg-[#172e45] text-white rounded-full">Get Started</button></a>
-                <a href="{{ route('login') }}"><button class="btn bg-[#d8eedb] text-[#172e45] rounded-full">Login</button></a>
+                <a href="{{ route('register') }}"><button class="btn bg-[#172e45] text-[#d8eedb] rounded-full" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">Get Started</button></a>
+                <a href="{{ route('login') }}"><button class="btn bg-[#d8eedb] text-[#172e45] rounded-full" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">Login</button></a>
             </div>
             </div>
         </div>
