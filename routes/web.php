@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FocusAreaController;
+use App\Http\Controllers\PlanController;
+use App\Http\Controllers\RecPlanController;
+use App\Http\Controllers\UserPlanController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -8,14 +12,6 @@ Route::middleware('guest')->group(function () {
     Route::get('/', function () {
         return view('landingpage');
     })->name('landing');
-
-    Route::get('/about', function () {
-        return view('components.about');
-    })->name('about');
-
-    Route::get('/features', function () {
-        return view('components.features');
-    })->name('features');
 });
 
 Route::middleware([ 'auth', 'verified',])->group(function () {
@@ -28,31 +24,20 @@ Route::middleware([ 'auth', 'verified',])->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/select-focus', function () {
-        $fokusList = [
-            'Hemat Energi',
-            'Transportasi Ramah Lingkungan',
-            'Mengurangi Sampah Plastik',
-            'Pohon dan Alam',
-            'Manajemen Air'
-        ];
-        return view('focus-selection', compact('fokusList'));
-    })->name('select.focus');
-
-    Route::post('/select-focus', function (\Illuminate\Http\Request $request) {
-        $request->validate([
-            'focus' => 'required|string',
-        ]);
-        return redirect()->route('dashboard');
-    })->name('focus.submit');
-
-    Route::get('/plan', function () {
-        return view('components.plan');
-    })->name('plans');
+    Route::get('/select-focus', [FocusAreaController::class, 'show'])->name('select.focus');
+    Route::post('/select-focus', [FocusAreaController::class, 'store'])->name('focus.submit');
     
-    Route::get('/myplan', function () {
-        return view('components.myplan');
-    })->name('myplan');
+    Route::get('/plan', [PlanController::class, 'index'])->name('plans');
+
+    Route::get('/dashboard', [RecPlanController::class, 'index'])->name('dashboard');
+    
+    Route::get('/getplan/{plan}', [PlanController::class, 'show'])->name('getplan');
+    Route::post('/getplan/{plan}', [UserPlanController::class, 'addPlan'])->name('plan.add');
+
+    Route::get('/myplan', [UserPlanController::class, 'index'])->name('myplan');
+    Route::post('/myplan/step/{stepId}/complete', [UserPlanController::class, 'completeStep'])->name('step.complete');
+    Route::post('/myplan/step/{planId}/complete', [UserPlanController::class, 'completePlan'])->name('plan.complete');
+    Route::post('/myplan/step/{planId}/cancel', [UserPlanController::class, 'cancelPlan'])->name('plan.cancel');
 });
 
 

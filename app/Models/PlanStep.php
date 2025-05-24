@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PlanStep extends Model
 {
-    protected $fillable = ['plan_id', 'title', 'urutan'];
+    protected $fillable = ['plan_id', 'title', 'description'];
 
     public function plan()
     {

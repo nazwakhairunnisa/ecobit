@@ -35,44 +35,28 @@
         </div>
         <div class="w-3/4">
             <div class="flex overflow-x-auto gap-6 scrollbar-hide">
+                @forelse($recPlans as $plan)
                 <div class="card w-80 bg-base-100 shadow-sm border border-black-300 flex-shrink-0">
                     <div class="card-body">
                         <div class="card-title flex items-center">
-                            <h2 class="bg-[#e6f0e2]  px-3 py-2 text-[#4f8536] rounded-2xl inline-block">Medium Card</h2>
+                            <h2 class="bg-[#e6f0e2]  px-3 py-2 text-[#4f8536] rounded-2xl inline-block">
+                                {{ strtoupper($plan->title) }}
+                            </h2>
                         </div>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                        <p>{{ \Illuminate\Support\Str::limit($plan->plan_details, 100, '...') }}</p>
                         <div class="justify-end card-actions">
-                        <a href="/getplan"><button class="btn btn-primary rounded-full">Get Plan</button></a>
+                        <a href="{{ route('getplan', $plan->id) }}">
+                            <button class="btn btn-primary rounded-full">
+                            {{ Auth::user()->plans()->where('plan_id', $plan->id)->exists() ? 'SEE MORE' : 'GET PLAN' }}
+                            </button>
+                        </a>
                         </div>
                     </div>
                 </div>
-                <div class="card w-80 bg-base-100 shadow-sm border border-black-300 flex-shrink-0">
-                    <div class="card-body">
-                        <h2 class="card-title">Medium Card</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div class="justify-end card-actions">
-                        <a href="/getplan"><button class="btn btn-primary rounded-full">Get Plan</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card w-80 bg-base-100 shadow-sm border border-black-300 flex-shrink-0">
-                    <div class="card-body">
-                        <h2 class="card-title">Medium Card</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div class="justify-end card-actions">
-                        <a href="/getplan"><button class="btn btn-primary rounded-full">Get Plan</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card w-80 bg-base-100 shadow-sm border border-black-300 flex-shrink-0">
-                    <div class="card-body">
-                        <h2 class="card-title">Medium Card</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div class="justify-end card-actions">
-                        <a href="/getplan"><button class="btn btn-primary rounded-full">Get Plan</button></a>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                <p class="text=gray-500">Belum ada rekomendasi plan untuk kamu</p>
+                @endforelse
+                
             </div>
             <div class="flex w-full justify-end gap-2 py-4">
                 <button class="btn btn-md" onclick="scrollCarousel(-1)">«</button>
@@ -80,6 +64,15 @@
             </div>
         </div>
     </div>
+
+    <!-- <div>
+    <h2>Fokus Kamu</h2>
+    <ul>
+        @foreach (auth()->user()->focusAreas as $focus)
+            <li>{{ $focus->name }}</li>
+        @endforeach
+    </ul>
+</div> -->
 
 <script>
     function scrollCarousel(direction) {
