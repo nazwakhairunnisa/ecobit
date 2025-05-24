@@ -16,8 +16,8 @@
                 et a id nisi.
             </p>
             <div class="flex items-center justify-end gap-4">
-                <a href="{{ route('register') }}"><button class="btn bg-[#172e45] text-white rounded-full">Get Started</button></a>
-                <a href="{{ route('login') }}"><button class="btn bg-[#d8eedb] text-[#172e45] rounded-full">Login</button></a>
+                <a href="{{ route('register') }}"><button class="btn bg-[#172e45] text-[#d8eedb] rounded-full" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">Get Started</button></a>
+                <a href="{{ route('login') }}"><button class="btn bg-[#d8eedb] text-[#172e45] rounded-full" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">Login</button></a>
             </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <section id="features">
     <div class="flex w-full flex-col mt-12">
-        <div class="py-4 px-7 bg-[#172e45] text-white rounded-2xl inline-block justify-center items-center flex mx-auto" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">
+        <div class="py-4 px-7 bg-[#172e45] text-[#d8eedb] rounded-2xl inline-block justify-center items-center flex mx-auto" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">
             <h1 class="text-5xl font-bold">ABOUT FEATURES</h1>
         </div>
         <div class="mt-36 flex flex-col lg:flex-row justify-center items-center px-4 lg:px-8 py-4 gap-36 overflow-visible">
