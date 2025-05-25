@@ -1,4 +1,4 @@
-<section id="features">
+<section id="features" class="min-h-screen pt-20">
     <div class="flex w-full flex-col mt-12">
         <div class="py-4 px-7 bg-[#172e45] text-[#d8eedb] rounded-2xl inline-block justify-center items-center flex mx-auto" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">
             <h1 class="text-5xl font-bold">ABOUT FEATURES</h1>
