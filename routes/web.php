@@ -36,8 +36,8 @@ Route::middleware([ 'auth', 'verified',])->group(function () {
 
     Route::get('/myplan', [UserPlanController::class, 'index'])->name('myplan');
     Route::post('/myplan/step/{stepId}/complete', [UserPlanController::class, 'completeStep'])->name('step.complete');
-    Route::post('/myplan/step/{planId}/complete', [UserPlanController::class, 'completePlan'])->name('plan.complete');
-    Route::post('/myplan/step/{planId}/cancel', [UserPlanController::class, 'cancelPlan'])->name('plan.cancel');
+    Route::post('/myplan/plan/{planId}/complete', [UserPlanController::class, 'completePlan'])->name('plan.complete');
+    Route::post('/myplan/plan/{planId}/cancel', [UserPlanController::class, 'cancelPlan'])->name('plan.cancel');
 });
 
 

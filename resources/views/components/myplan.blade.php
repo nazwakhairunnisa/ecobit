@@ -64,10 +64,12 @@
 
                 <!-- Tombol -->
                 <div class="flex items-center justify-end gap-4">
+                    @if ($plan->all_steps_completed)
                     <form action="{{ route('plan.complete', $plan->id) }}" method="POST" >
                         @csrf
                         <button type="submit" class="btn bg-[#19344f] text-[#d8eedb] font-bold px-4 py-2 rounded-full hover:bg-[#19344f]">FINISH</button>
                     </form>
+                    @endif
                     <form action="{{ route('plan.cancel', $plan->id) }}" method="POST">
                         @csrf
                         <button type="submit" class="btn bg-red-500 text-white font-bold px-4 py-2 rounded-full hover:bg-red-600">DELETE PLAN</button>

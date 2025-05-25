@@ -27,6 +27,12 @@ class UserPlanController extends Controller
         $ongoingPlans = $plans->where('pivot.is_completed', false)->count();
         $completedPlans = $plans->where('pivot.is_completed', true)->count();
 
+        $plans->each(function ($plan) {
+            $plan->all_steps_completed = $plan->steps->every(function ($step) {
+                return $step->userPlanSteps->first()->is_completed;
+            });
+        });
+
         return view('components.myplan', [
             'plans' => $plans,
             'ongoingPlans' => $ongoingPlans,
@@ -105,20 +111,6 @@ class UserPlanController extends Controller
             ->where('is_completed', false)
             ->doesntExist();
 
-            if ($allStepsCompleted) {
-                $user->plans()->updateExistingPivot($planId, [
-                    'is_completed' => true,
-                    'completed_at' => now(),
-                ]);
-            }
-    
-            return redirect()->route('myplan')->with('success', 'Step berhasil diselesaikan!');if ($allStepsCompleted) {
-                $user->plans()->updateExistingPivot($planId, [
-                    'is_completed' => true,
-                    'completed_at' => now(),
-                ]);
-            }
-    
             return redirect()->route('myplan')->with('success', 'Step berhasil diselesaikan!');
     }
 
@@ -127,12 +119,14 @@ class UserPlanController extends Controller
         $user = Auth::user();
         $plan = $user->plans()->where('plan_id', $planId)->firstOrFail();
 
-        UserPlanStep::where('user_id', $user->id)
+        $allStepsCompleted = UserPlanStep::where('user_id', $user->id)
             ->whereIn('plan_step_id', PlanStep::where('plan_id', $planId)->pluck('id'))
-            ->update([
-                'is_completed' => true,
-                'completed_at' => now(),
-            ]);
+            ->where('is_completed', false)
+            ->doesntExist();
+
+        if (!$allStepsCompleted) {
+            return redirect()->route('myplan')->with('error', 'Selesaikan semua langkah terlebih dahulu!');
+        }
 
         $user->plans()->updateExistingPivot($planId, [
             'is_completed' => true,
