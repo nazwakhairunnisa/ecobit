@@ -32,9 +32,9 @@ class AuthenticatedSessionController extends Controller
         if (Auth::user()->focusAreas()->count() == 0) {
             return redirect()->route('select.focus');
         }
-        return redirect()->intended(RouteServiceProvider::HOME);
-
         return redirect()->intended(route('dashboard', absolute: false));
+        // return redirect()->intended(RouteServiceProvider::HOME);
+
 
     }
 
