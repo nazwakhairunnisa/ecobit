@@ -90,7 +90,7 @@
             @else
 
             @foreach ($plans as $plan)
-            @if (!$plan->pivot->is_completed)
+            @if ($plan->pivot->is_completed)
             <div class="border-2 border-gray-500 rounded-xl p-4 mb-10">
                 <div class="bg-[#eeeed4] font-bold text-[#4f8536] font-bold px-4 py-2 mb-4 rounded-xl inline-block">{{ $plan->title }}</div>
 
