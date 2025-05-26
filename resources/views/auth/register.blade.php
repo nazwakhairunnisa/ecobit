@@ -33,6 +33,15 @@
             <div class="text-3xl font-bold text-[#1E293B] mb-12 text-center">REGISTER</div>
             
             <div class="flex flex-col items-center">
+                <div class="mb-4 text-sm text-red-600 min-h-[32px] flex items-center justify-center">
+                    @if ($errors->any())
+                        <ul class="list-disc list-inside">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
                 <form method="POST" action="{{ route('register') }}" class="space-y-4 max-w-sm w-full -mt-8">
                     @csrf
                     <input type="text" name="name" placeholder="Full Name"
