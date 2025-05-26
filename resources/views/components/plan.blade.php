@@ -1,12 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Plan Page</title>
-
      <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -94,8 +88,6 @@
             text-decoration: underline;
         }
     </style>
-</head>
-<body>
 
     <div class="plan-section px-20">
     <!-- Filter -->
@@ -123,7 +115,7 @@
 
         <!-- Card Plan TREE -->
     @forelse($plans as $plan)
-        <div class="plan-card {{ $plan->focus_area_id }}" onclick="window.location='{{ route('getplan', $plan->id) }}'">
+        <div class="plan-card {{ $plan->focus_area_id }}" onclick="window.location='{{ route('getplan', $plan->id) }}'" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <div class="plan-header">
             <span class="plan-label" style="background-color: #e6e6c9; color: #4a774e;">{{ strtoupper($plan->title) }}</span>
             </div>
@@ -136,10 +128,7 @@
         <p>Tidak ada plan untuk focus area ini</p>
     @endforelse
 
-    
     </div>
-</body>
-</html>
 
 
 @endsection
