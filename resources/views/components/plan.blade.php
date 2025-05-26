@@ -141,23 +141,5 @@
 </body>
 </html>
 
-<!-- <script>
-    const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.plan-card');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.getAttribute('data-filter');
-
-            cards.forEach(card => {
-                if (card.classList.contains(category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-</script> -->
 
 @endsection

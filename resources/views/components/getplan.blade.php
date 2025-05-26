@@ -35,6 +35,10 @@ style="background-image: url('{{ asset('assets/img/banner.png') }}');">
     </li>
     @endforeach
   </ul>
+
+
+
+  
   <div class="flex items-center justify-end">
     @if (!$isTaken)
     <form action="{{ route('plan.add', $plan->id) }}" method="POST">

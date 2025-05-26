@@ -1,4 +1,4 @@
-<section id="about" class="pt-20">
+<section id="about">
 <div class="min-h-screen mt-10">
   <div class=" w-full flex items-center justify-center relative bg-cover bg-center" 
   style="background-image: url('{{ asset('assets/img/element.png') }}');">
