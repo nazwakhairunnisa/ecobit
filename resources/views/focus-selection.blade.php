@@ -1,3 +1,4 @@
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -12,14 +13,15 @@
 </head>
 <body class="bg-[#f8fafc] text-[#0f172a] min-h-screen flex flex-col">
 
-    <!--logo -->
-    <nav class="w-full bg-white py-3 px-8 flex items-center fixed top-0 left-0 z-50">
-        <img src="{{ asset('assets/img/logo.png') }}" alt="ecobit logo" class="h-12">
+        <!-- Logo -->
+        <nav class="absolute top-0 left-0 w-full z-20 flex items-center justify-between px-8 py-4 bg-transparent fixed top-0 left-0 z-50">
+        <div>
+            <img src="{{ asset('assets/img/logo.png') }}" alt="ECOBIT Logo" class="h-12">
+        </div>
     </nav>
-    <div class="h-20"></div>
 
     <!-- Konten utama, tanpa kotak pembatas, lebih lebar -->
-    <div class="w-full max-w-5xl mx-auto px-4 py-8">
+    <div class="w-full max-w-5xl mx-auto px-4 py-8 mt-10">
         <!-- Judul -->
         <h1 class="text-center text-2xl font-extrabold mb-8 text-[#0f172a] drop-shadow-lg leading-relaxed"
             HALO!<br>
@@ -30,15 +32,23 @@
             @csrf
             <input type="hidden" name="focus" id="focus-input">
 
-            @foreach ($fokusList as $fokus)
-            <button
-                type="button"
-                onclick="selectFocus('{{ $fokus }}', event)"
-                class="focus-button w-full rounded-xl py-4 px-8 bg-white hover:bg-[#e0f2fe] transition-all duration-200 text-lg shadow-sm"
-            >
-                {{ $fokus }}
-            </button>
-        @endforeach
+            @foreach ($focusAreas as $focus)
+            <label class="focus-checkbox w-full rounded-xl py-4 px-8 bg-white hover:bg-[#e0f2fe] transition-all duration-200 text-lg shadow-sm flex items-center cursor-pointer">
+                    <input
+                        type="checkbox"
+                        name="focus_areas[]"
+                        value="{{ $focus->id }}"
+                        class="mr-3 h-5 w-5 text-[#0f172a] focus:ring-[#0f172a]"
+                        onchange="toggleCheckbox(this)"
+                    >
+                    <span>{{ $focus->name }}</span>
+                </label>
+            @endforeach
+
+            <!-- Error message -->
+            @error('focus_areas')
+                <p class="text-red-500 text-sm">{{ $message }}</p>
+            @enderror
 
             <div class="flex justify-end pt-6">
                 <button type="submit" class="bg-[#0f172a] text-white px-8 py-3 rounded-full hover:bg-[#1e293b] transition font-bold text-lg shadow-md">
@@ -49,13 +59,15 @@
     </div>
 
     <script>
-        function selectFocus(value, event) {
-            document.getElementById('focus-input').value = value;
-            document.querySelectorAll('.focus-button').forEach(btn => {
-                btn.classList.remove('bg-[#D6E9D0]', 'font-bold', 'ring-2', 'ring-[#0f172a]');
-                btn.classList.add('bg-white');
-            });
-            event.target.classList.add('bg-[#D6E9D0]', 'font-bold', 'ring-2', 'ring-[#0f172a]');
+        function toggleCheckbox(checkbox) {
+            const label = checkbox.parentElement;
+            if (checkbox.checked) {
+                label.classList.add('bg-[#D6E9D0]', 'font-bold', 'ring-2', 'ring-[#0f172a]');
+                label.classList.remove('bg-white');
+            } else {
+                label.classList.remove('bg-[#D6E9D0]', 'font-bold', 'ring-2', 'ring-[#0f172a]');
+                label.classList.add('bg-white');
+            }
         }
     </script>
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class FocusArea extends Model
 {
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name'];
     public function users ()
     {
         return $this->belongsToMany(User::class, 'user_focus_areas');

@@ -9,8 +9,8 @@
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                     @guest
                     <li><a href="{{ route('landing') }}" class="font-quicksand">Home</a></li>
-                    <li><a href="{{ route('features') }}" class="font-quicksand">Features</a></li>
-                    <li><a href="{{ route('about') }}" class="font-quicksand">About</a></li>
+                    <li><a href="#about" class="font-quicksand">Features</a></li>
+                    <li><a href="#features" class="font-quicksand">About</a></li>
                     @else
                     <li><a href="{{ route('dashboard') }}" class="font-quicksand">Home</a></li>
                     <li><a href="/plan" class="font-quicksand">Plan</a></li>
@@ -28,8 +28,8 @@
                 <ul class="menu menu-horizontal px-1">
                 @guest
                     <li class="mx-4"><a href="{{ route('landing') }}" class="text-base font-quicksand">Home</a></li>
-                    <li class="mx-4"><a href="{{ route('features') }}" class="text-base font-quicksand">Features</a></li>
-                    <li class="mx-4"><a href="{{ route('about') }}" class="text-base font-quicksand">About</a></li>
+                    <li class="mx-4"><a href="#features" class="text-base font-quicksand">Features</a></li>
+                    <li class="mx-4"><a href="#about" class="text-base font-quicksand">About</a></li>
                 @else
                     <li class="mx-4"><a href="{{ route('dashboard') }}" class="text-base font-quicksand">Home</a></li>
                     <li class="mx-4"><a href="/plan" class="text-base font-quicksand">Plan</a></li>
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content bg-green-300 rounded-box z-1 mt-3 w-30 p-2 shadow">
-                        <li><a href="{{ route('profile.edit') }}">Edit Profile</a></li>
+                        <li><a href="{{ route('profile.show') }}":active="request()->routeIs('profile.show')">Profile</a></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                     </ul>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

@@ -14,12 +14,31 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
     @include('layouts.navigation')
+
+    @if (session('success'))
+        <div class="max-w-4xl mx-auto mt-4 p-4 bg-green-100 text-green-700 rounded">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if (session('error'))
+        <div class="max-w-4xl mx-auto mt-4 p-4 bg-red-100 text-red-700 rounded">
+            {{ session('error') }}
+    @endif
     
     @yield('content')
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>

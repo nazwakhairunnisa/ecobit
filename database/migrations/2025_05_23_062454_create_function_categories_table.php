@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('plans', function (Blueprint $table) {
+        Schema::create('function_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('focus_area_id')->constrained()->onDelete('cascade');
-            $table->string('title');
-            $table->text('plan_details')->nullable();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('plans');
+        Schema::dropIfExists('function_categories');
     }
 };
