@@ -4,7 +4,8 @@
             <h1 class="text-5xl font-bold">ABOUT FEATURES</h1>
         </div>
         <div class="mt-36 flex flex-col lg:flex-row justify-center items-center px-4 lg:px-8 py-4 gap-36 overflow-visible">
-            <div class="card bg-base-100 w-96 shadow-sm border border-gray-300 overflow-visible" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="200">
+            <div data-aos="fade-up" data-aos-duration="1400" data-aos-delay="200">
+            <div class="card bg-base-100 w-96 shadow-sm border border-gray-300 overflow-visible transform transition-transform duration-300 ease-in-out hover:scale-110 will-change-transform cursor-default">
                 <div class="card-body items-center h-20">
                     <img
                     src="{{ asset('assets/img/feature1.png') }}"
@@ -16,7 +17,10 @@
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                 </div>
             </div>
-            <div class="card bg-base-100 w-96 shadow-sm border border-gray-300 overflow-visible" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="400">
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="1400" data-aos-delay="400">
+            <div class="card bg-base-100 w-96 shadow-sm border border-gray-300 overflow-visible transform transition-transform duration-300 ease-in-out hover:scale-110 will-change-transform cursor-default">
                 <div class="card-body items-center h-20">
                     <img
                     src="{{ asset('assets/img/feature2.png') }}"
@@ -28,6 +32,8 @@
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                 </div>
             </div>
+            </div>
+
         </div>
     </div>
 </section>
