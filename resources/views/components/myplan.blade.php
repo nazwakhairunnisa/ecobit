@@ -10,26 +10,26 @@
 
         <!-- Plans to Finish -->
         <div class="flex flex-col items-center justify-center space-y-1">
-            <h2 class="text-lg font-bold text-[#19344f]"
+            <h2 class="text-lg font-bold text-[#19344f]" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
                         style="text-shadow: 1px 1px 0 #94a3b8">ONGOING PLANS</h2>
             <div class="flex items-center justify-center ">
-                <img src="{{ asset('assets/img/ongoing.gif') }}" alt="Plans To Finish" class="w-40 md:w-45" />
+                <img src="{{ asset('assets/img/ongoing.gif') }}" alt="Plans To Finish" class="w-40 md:w-45"  data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200" />
                 <div class="flex items-center justify-center -ml-8">
-                    <p class="text-6xl font-bold text-[#4f8536] mb-0">{{ $ongoingPlans }}</p>
-                    <span class="bg-[#eeeed4] font-bold text-[#4f8536] px-3 py-1 rounded mt-2">PLANS</span>
+                    <p class="text-6xl font-bold text-[#4f8536] mb-0" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">{{ $ongoingPlans }}</p>
+                    <span class="bg-[#eeeed4] font-bold text-[#4f8536] px-3 py-1 rounded mt-2" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">PLANS</span>
                 </div>
             </div>
         </div>
 
         <!-- Plans Completed -->
         <div class="flex flex-col items-center justify-center space-y-1">
-             <h2 class="text-lg font-bold text-[#19344f]"
+             <h2 class="text-lg font-bold text-[#19344f]" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
                         style="text-shadow: 1px 1px 0 #94a3b8">COMPLETED PLANS</h2>
             <div class="flex items-center justify-center ">
-                <img src="{{ asset('assets/img/complete.gif') }}" alt="Plans Completed" class="w-40 md:w-45" />
+                <img src="{{ asset('assets/img/complete.gif') }}" alt="Plans Completed" class="w-40 md:w-45" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200" />
                 <div class="flex items-center justify-center -ml-6">
-                    <p class="text-6xl font-bold text-[#4f8536] mb-0">{{ $completedPlans }}</p>
-                    <span class="bg-[#eeeed4] font-bold text-[#4f8536] px-3 py-1 rounded mt-2">PLANS</span>
+                    <p class="text-6xl font-bold text-[#4f8536] mb-0" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">{{ $completedPlans }}</p>
+                    <span class="bg-[#eeeed4] font-bold text-[#4f8536] px-3 py-1 rounded mt-2" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">PLANS</span>
                 </div>
             </div>
         </div>

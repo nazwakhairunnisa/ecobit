@@ -27,9 +27,9 @@
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
                 @guest
-                    <li class="mx-4"><a href="{{ route('landing') }}" class="text-base font-quicksand">Home</a></li>
-                    <li class="mx-4"><a href="#features" class="text-base font-quicksand">Features</a></li>
-                    <li class="mx-4"><a href="#about" class="text-base font-quicksand">About</a></li>
+                    <li class="mx-4 transition duration-300 hover:scale-110 rounded-lg"><a href="{{ route('landing') }}"  class="text-base font-quicksand hover:bg-[#d8eedb] hover:text-[#4f8536]">Home</a></li>
+                    <li class="mx-4 transition duration-300 hover:scale-110 rounded-lg"><a href="#features" class="text-base font-quicksand hover:bg-[#d8eedb] hover:text-[#4f8536]">Features</a></li>
+                    <li class="mx-4 transition duration-300 hover:scale-110 rounded-lg"><a href="#about" class="text-base font-quicksand hover:bg-[#d8eedb] hover:text-[#4f8536]">About</a></li>
                 @else
                     <li class="mx-4"><a href="{{ route('dashboard') }}" class="text-base font-quicksand">Home</a></li>
                     <li class="mx-4"><a href="/plan" class="text-base font-quicksand">Plan</a></li>

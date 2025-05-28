@@ -6,6 +6,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Import Fredoka from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         body {
             font-family: 'Fredoka', sans-serif;
@@ -16,7 +19,7 @@
 
     <!-- Wave Background -->
     <div class="absolute bottom-0 left-0 w-full z-0">
-        <img src="{{ asset('images/wave.png') }}" alt="Wave Background" class="w-full">
+        <img src="{{ asset('images/wave.png') }}" alt="Wave Background" class="w-full" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="200">
     </div>
 
     <!-- Logo -->
@@ -29,7 +32,7 @@
     <div class="z-10 w-full max-w-6xl flex justify-between items-center px-8">
         <!-- Left Section -->
         <div class="flex-1">
-            <div class="text-3xl font-bold text-[#1E293B] mb-12 text-center">LOG IN</div>
+            <div class="text-3xl font-bold text-[#1E293B] mb-12 text-center" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">LOG IN</div>
             
             <div class="flex flex-col items-center">
                 <div class="mb-4 min-h-[32px] flex items-center justify-center">
@@ -52,12 +55,12 @@
                         class="w-full px-6 py-3 bg-[#D6E9D0] rounded-full border border-[#1E293B] focus:outline-none font-sans" required>
                     <div class="flex justify-center">
                         <button type="submit"
-                            class="bg-[#1E293B] text-white px-6 py-3 rounded-full hover:bg-[#0f172a]">
+                            class="bg-[#1E293B] text-white px-6 py-3 rounded-full hover:bg-[#0f172a]" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">
                             LOG IN
                         </button>
                     </div>
                     <div class="text-center">
-                        <p class="text-sm mt-4 text-[#1E293B]">
+                        <p class="text-sm mt-4 text-[#1E293B]" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">
                             Belum punya akun?
                             <a href="{{ route('register') }}" class="font-bold underline hover:text-green-700">Daftar di sini</a>
                         </p>
@@ -68,8 +71,13 @@
 
         <!-- Right Image -->
         <div class="flex-1 hidden md:flex justify-end">
-            <img src="{{ asset('images/earth.png') }}" alt="Illustration" class="w-[250px] -ml-20">
+            <img src="{{ asset('images/earth.png') }}" alt="Illustration" class="w-[250px] -ml-20" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">
         </div>
     </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
 </body>
 </html>
