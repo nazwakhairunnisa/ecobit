@@ -7,6 +7,7 @@ use App\Http\Controllers\RecPlanController;
 use App\Http\Controllers\UserPlanController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 Route::middleware('guest')->group(function () {
     Route::get('/', function () {
@@ -14,15 +15,19 @@ Route::middleware('guest')->group(function () {
     })->name('landing');
 });
 
-Route::middleware([ 'auth', 'verified',])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    return view('dashboard');
+})->name('dashboard');
 
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/artikel', function () {
+    return view('artikel');
+    })->name('artikel');
 
     Route::get('/select-focus', [FocusAreaController::class, 'show'])->name('select.focus');
     Route::post('/select-focus', [FocusAreaController::class, 'store'])->name('focus.submit');

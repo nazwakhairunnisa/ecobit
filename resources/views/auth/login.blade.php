@@ -32,9 +32,21 @@
     <div class="z-10 w-full max-w-6xl flex justify-between items-center px-8">
         <!-- Left Section -->
         <div class="flex-1">
-            <div class="text-3xl font-bold text-[#1E293B] mb-12 text-center" data-aos="fade-down" data-aos-duration="1400" data-aos-delay="200">LOG IN</div>
+            <div class="text-3xl font-bold text-[#1E293B] mb-12 text-center">LOG IN</div>
             
             <div class="flex flex-col items-center">
+                <div class="mb-4 min-h-[32px] flex items-center justify-center">
+                    @if ($errors->any())
+                        <div class="text-sm text-red-600 w-full text-center">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
+
                 <form method="POST" action="{{ route('login') }}" class="space-y-6 max-w-sm w-full">
                     @csrf
                     <input type="email" name="email" placeholder="Email"
@@ -58,15 +70,9 @@
         </div>
 
         <!-- Right Image -->
-        <div class="flex-1 hidden md:flex justify-end" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">
-            <img src="{{ asset('images/earth.png') }}" alt="Illustration" class="w-[250px] -ml-20 transform transition-transform duration-300 ease-in-out hover:scale-110 will-change-transform cursor-default">
+        <div class="flex-1 hidden md:flex justify-end">
+            <img src="{{ asset('images/earth.png') }}" alt="Illustration" class="w-[250px] -ml-20">
         </div>
     </div>
-
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>

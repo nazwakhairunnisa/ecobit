@@ -23,7 +23,7 @@
     <!-- Konten utama, tanpa kotak pembatas, lebih lebar -->
     <div class="w-full max-w-5xl mx-auto px-4 py-8 mt-10">
         <!-- Judul -->
-        <h1 class="text-center text-2xl font-extrabold mb-8 text-[#0f172a] drop-shadow-lg leading-relaxed" style="text-shadow: 3px 3px 10px #b6c2d1;">
+        <h1 class="text-center text-2xl font-extrabold mb-8 text-[#0f172a] drop-shadow-lg leading-relaxed"
             HALO!<br>
             Kamu pengen mulai dari perubahan kecil yang bisa berdampak ke iklim? Yuk pilih fokus kamu!
         </h1>
