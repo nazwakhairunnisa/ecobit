@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Plan;
 use App\Models\FocusArea;
+use App\Models\Article;
 use App\Models\PlanStep;
 use Illuminate\Support\Facades\Auth;
 
@@ -40,11 +41,16 @@ class PlanController extends Controller
         $plan = Plan::with('steps')->findOrFail($id);
         $isTaken = Auth::check() && Auth::user()->plans()->where('plan_id', $id)->exists();
         $steps = $plan->steps;
+        $relatedArticles = Article::where('focus_area_id', $plan->focus_area_id)
+            ->inRandomOrder()
+            ->limit(3)
+            ->get();
 
         return view('components.getplan', [
             'plan' => $plan,
             'steps' => $steps,
             'isTaken'=> $isTaken,
+            'relatedArticles' => $relatedArticles,
         ]);
     }
 

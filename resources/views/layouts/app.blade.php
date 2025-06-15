@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- cdn template daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -22,17 +23,9 @@
 <body>
     @include('layouts.navigation')
 
-    @if (session('success'))
-        <div class="max-w-4xl mx-auto mt-4 p-4 bg-green-100 text-green-700 rounded">
-            {{ session('success') }}
-        </div>
-    @endif
-    @if (session('error'))
-        <div class="max-w-4xl mx-auto mt-4 p-4 bg-red-100 text-red-700 rounded">
-            {{ session('error') }}
-    @endif
-    
-    @yield('content')
+    <div class="pt-20">
+        @yield('content')
+    </div>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -40,5 +33,6 @@
         AOS.init();
     </script>
 
+    @include('components.footer')
 </body>
 </html>

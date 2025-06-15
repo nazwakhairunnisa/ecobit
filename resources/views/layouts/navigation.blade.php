@@ -1,5 +1,5 @@
-<nav class="navbar sticky top-0 z-100 m-0 p-0">
-    <div class="navbar bg-base-100 shadow-lg pb-3 ">
+<nav class="navbar fixed top-0 z-100 m-0 p-0 overflow-visible">
+    <div class="navbar text-2xl bg-white/30 backdrop-blur-md border border-b-[#d8eedb] shadow-lg">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -8,44 +8,47 @@
                 <ul tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                     @guest
-                    <li><a href="{{ route('landing') }}" class="font-quicksand">Home</a></li>
-                    <li><a href="#about" class="font-quicksand">Features</a></li>
-                    <li><a href="#features" class="font-quicksand">About</a></li>
+                    <li><a href="{{ route('landing') }}" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
+                    <li><a href="#about" style="font-family: 'Quicksand', sans-serif;">Features</a></li>
+                    <li><a href="#features" style="font-family: 'Quicksand', sans-serif;">About</a></li>
                     @else
-                    <li><a href="{{ route('dashboard') }}" class="font-quicksand">Home</a></li>
-                    <li><a href="/plan" class="font-quicksand">Plan</a></li>
-                    <li><a href="/myplan" class="font-quicksand">My Plan</a></li>
+                    <li><a href="{{ route('dashboard') }}" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
+                    <li><a href="/plan" style="font-family: 'Quicksand', sans-serif;">Plan</a></li>
+                    <li><a href="/myplan" style="font-family: 'Quicksand', sans-serif;">My Plan</a></li>
                     @endguest
                 </ul>
                 </div>
                 <a class="w-25 ml-4">
+                <!-- bg-white/30 backdrop-blur-md rounded-xl -->
                     <div class="logo-img">
-                        <img src="{{ asset('assets/img/logo.png') }}" alt="">
+                        <img src="{{ asset('assets/img/logo4.png') }}" alt="">
                     </div>
                 </a>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
+                <ul class="menu menu-horizontal w-full">
                 @guest
-                    <li class="mx-4 transition duration-300 hover:scale-110 rounded-lg"><a href="{{ route('landing') }}"  class="text-base font-quicksand hover:bg-[#d8eedb] hover:text-[#4f8536]">Home</a></li>
-                    <li class="mx-4 transition duration-300 hover:scale-110 rounded-lg"><a href="#features" class="text-base font-quicksand hover:bg-[#d8eedb] hover:text-[#4f8536]">Features</a></li>
-                    <li class="mx-4 transition duration-300 hover:scale-110 rounded-lg"><a href="#about" class="text-base font-quicksand hover:bg-[#d8eedb] hover:text-[#4f8536]">About</a></li>
+                    <li class="transition duration-300 hover:scale-110 mx-4"><a href="{{ route('landing') }}"  class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg"  style="font-family: 'Quicksand', sans-serif;">Home</a></li>
+                    <li class="transition duration-300 hover:scale-110 mx-4"><a href="#features" class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg"  style="font-family: 'Quicksand', sans-serif;">Features</a></li>
+                    <li class="transition duration-300 hover:scale-110 mx-4"><a href="#about" class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg"  style="font-family: 'Quicksand', sans-serif;">About</a></li>
                 @else
-                    <li class="mx-4"><a href="{{ route('dashboard') }}" class="text-base font-quicksand">Home</a></li>
-                    <li class="mx-4"><a href="/plan" class="text-base font-quicksand">Plan</a></li>
-                    <li class="mx-4"><a href="/myplan" class="text-base font-quicksand">My Plan</a></li>
+                    <li class="mx-4"><a href="{{ route('dashboard') }}" class="text-base" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
+                    <li class="mx-4"><a href="/plan" class="text-base" style="font-family: 'Quicksand', sans-serif;">Plan</a></li>
+                    <li class="mx-4"><a href="/myplan" class="text-base" style="font-family: 'Quicksand', sans-serif;">My Plan</a></li>
                 @endguest
                 </ul>
             </div>
             <div class="navbar-end">
             @guest
-                <a href="{{ route('register') }}" class="btn bg-[#172e45] text-white rounded-full px-10 font-quicksand font-bold">Sign Up</a>
+                <a href="{{ route('register') }}" class="btn bg-[#172e45] text-white rounded-full px-10  style="font-family: 'Quicksand', sans-serif;">Sign Up</a>
             @else
                 <div class="dropdown dropdown-end">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                <!-- bg-white/30 backdrop-blur-md rounded-xl px-2 py-6 -->
+                    <div tabindex="0" role="button" class="btn btn-ghost avatar flex flex-row">
                         <div class="w-10 rounded-full">
                             <img alt="User Avatar" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
+                        <!-- <h3 class="ml-2">Profile</h3> -->
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content bg-green-300 rounded-box z-1 mt-3 w-30 p-2 shadow">
                         <li><a href="{{ route('profile.show') }}":active="request()->routeIs('profile.show')">Profile</a></li>

@@ -1,25 +1,40 @@
 <section id="footer">
-    <div class="bg-white mt-10">
-      
-      {{-- Thank You Section --}}
-      <div class="grid grid-cols-1 md:grid-cols-2">
-        <img src="{{ asset('assets/img/footer1.png') }}" class="w-full h-96 object-cover"/>
-
-        <div class="bg-white flex flex-col justify-center items-end p-10 space-y-10">
-          <div class="py-4 px-7 bg-[#172e45] text-white rounded-2xl inline-block" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="200">
-            <h1 class="text-5xl font-bold text-[#d8eedb] text-right" >THANK YOU!</h1>
-          </div>
-
-          <p class="text-2xl text-right text-gray-700" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis et tincidunt pretium, 
-            urna orci cursus enim, vel dapibus nisl nisi vel erat. Suspendisse potenti. 
-            Donec euismod justo nec justo tincidunt, vel malesuada mauris bibendum.
-          </p>
-        </div>
-      </div>
+    <div class="bg-white bottom-0">
 
       {{-- Footer --}}
-      <footer class="footer footer-horizontal footer-center bg-[#172e45] text-primary-content p-2">
+      <footer class="footer sm:footer-horizontal bg-[#172e45] text-primary-content p-10">
+      <aside>
+        <div>
+          <img src="{{ asset('assets/img/footer2.png') }}" class="mx-auto w-40 h-auto" alt="Footer Logo">
+        </div>
+        <p>
+          ACME Industries Ltd.
+          <br />
+          Providing reliable tech since 1992
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+      <!-- <footer class="footer footer-horizontal footer-center bg-[#172e45] text-primary-content p-2">
         <aside class="text-lg space-y-0">
           <div>
             <img src="{{ asset('assets/img/footer2.png') }}" class="mx-auto mb-1 w-48 h-auto" alt="Footer Logo">
@@ -75,6 +90,6 @@
             </a>
           </div>
         </nav>
-      </footer>
+      </footer> -->
     </div>
   </section>

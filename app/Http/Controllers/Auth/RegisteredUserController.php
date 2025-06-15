@@ -45,6 +45,10 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
+        if ($user->focusAreas()->count() == 0) {
+            return redirect()->route('select.focus');
+        }
+        
         return redirect(route('dashboard', absolute: false));
     }
 }

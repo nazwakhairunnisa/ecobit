@@ -32,19 +32,19 @@
     <div class="z-10 w-full max-w-6xl flex justify-between items-center px-8">
         <!-- Left Section -->
         <div class="flex-1">
-            <div class="text-3xl font-bold text-[#1E293B] mb-12 text-center">LOG IN</div>
+        <div class="text-3xl font-bold text-[#1E293B text-center" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">LOG IN</div>
             
-            <div class="flex flex-col items-center">
-                <div class="mb-4 min-h-[32px] flex items-center justify-center">
-                    @if ($errors->any())
-                        <div class="text-sm text-red-600 w-full text-center">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+        <div class="flex flex-col items-center">
+                <div class="min-h-[32px] flex items-center justify-center">
+                @if ($errors->any())
+                <div class="text-red-600 bg-red-100 rounded-lg p-4">
+                    <ul class="list-disc pl-5">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                 </div>
 
                 <form method="POST" action="{{ route('login') }}" class="space-y-6 max-w-sm w-full">
@@ -71,8 +71,14 @@
 
         <!-- Right Image -->
         <div class="flex-1 hidden md:flex justify-end">
-            <img src="{{ asset('images/earth.png') }}" alt="Illustration" class="w-[250px] -ml-20">
+        <img src="{{ asset('images/earth.png') }}" alt="Illustration" class="w-[250px] -ml-20" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">
         </div>
     </div>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
 </body>
 </html>

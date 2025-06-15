@@ -14,11 +14,17 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-
     
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <style>
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            scrollbar-width: none;
+        }
+    </style>
 
 </head>
 <body class="min-h-screen flex flex-col">
@@ -34,6 +40,10 @@
         AOS.init();
     </script>
     </main>
+
+    @include('components.thank-you')
     @include('components.footer')
+
+</script>
 </body>
 </html>

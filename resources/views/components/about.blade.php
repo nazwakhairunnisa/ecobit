@@ -1,15 +1,15 @@
-<section id="about" class="pt-8">
-<div class="min-h-screen mt-10">
+<section id="about" >
+<div class="min-h-screen">
   <div class=" w-full flex items-center justify-center relative bg-cover bg-center" 
   style="background-image: url('{{ asset('assets/img/element.png') }}');">
   <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white/70 to-transparent backdrop-blur-md pointer-events-none"></div>
       <div class="relative z-10  items-center justify-center mx-20">
         <div class="flex justify-center items-center mx-auto mt-20">
-          <div class="py-4 px-7 bg-[#172e45] text-[#d8eedb] rounded-2xl inline-block " data-aos="fade-left" data-aos-duration="1400" data-aos-delay="200">
+          <div class="mt-12 py-4 px-7 bg-[#172e45] text-[#d8eedb] rounded-2xl inline-block " data-aos="fade-left" data-aos-duration="1400" data-aos-delay="200">
             <h1 class="text-5xl font-bold">ABOUT US</h1>
           </div>
         </div>
-        <div class=" w-full flex flex-col lg:flex-row justify-between items-center px-8 lg:px-20 gap-10">
+        <div class=" w-full flex flex-col lg:flex-row justify-between items-center px-8 lg:px-20 gap-10 mt-5">
 
           <div data-aos="zoom-in-right" data-aos-duration="1400" data-aos-delay="200">
             <img src="{{ asset('assets/img/element1.png') }}" class="max-w-md transform transition-transform duration-300 ease-in-out hover:scale-110 will-change-transform cursor-default"/>

@@ -15,5 +15,8 @@ class FocusArea extends Model
     {
         return $this->hasMany(Plan::class);
     }
-
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }

@@ -33,11 +33,11 @@
         </div>
     </nav>
             
-            <div class="text-3xl font-bold text-[#1E293B] mb-12 text-center" data-aos="fade-down" data-aos-duration="1400" data-aos-delay="200">REGISTER</div>
+            <div class="text-3xl font-bold text-[#1E293B] mb-10 text-center" data-aos="fade-down" data-aos-duration="1400" data-aos-delay="200">REGISTER</div>
             
             <div class="flex flex-col items-center">
             @if ($errors->any())
-                <div class="mb-4 text-red-600 bg-red-100 rounded-lg p-4 mb-10">
+                <div class="text-red-600 bg-red-100 rounded-lg p-4 mb-10">
                     <ul class="list-disc pl-5">
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
