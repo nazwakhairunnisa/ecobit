@@ -3,7 +3,7 @@
 @section('content')
      <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Quicksand',  sans-serif;
             background-color: #ffffff;
             color: #1c2f3c;
             margin: 0;
@@ -40,6 +40,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            padding-bottom: 30px;
         }
 
         .plan-card {
@@ -62,7 +63,6 @@
 
         .plan-label {
             font-size: 24px;
-            font-weight: bold;
             padding: 10px 20px;
             border-radius: 15px;
             display: inline-block;
@@ -117,9 +117,9 @@
     @forelse($plans as $plan)
         <div class="plan-card {{ $plan->focus_area_id }}" onclick="window.location='{{ route('getplan', $plan->id) }}'" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <div class="plan-header">
-            <span class="plan-label" style="background-color: #e6e6c9; color: #4a774e;">{{ strtoupper($plan->title) }}</span>
+            <span class="plan-label" style="background-color: #e6e6c9; color: #4a774e; font-family: 'Fredoka', sans-serif;">{{ strtoupper($plan->title) }}</span>
             </div>
-            <p class="plan-desc">{{ Str::limit($plan->plan_details, 300, '...') }} 
+            <p class="plan-desc" style=" font-family: 'Quicksand', sans-serif;">{{ Str::limit($plan->plan_details, 300, '...') }} 
                 <a class="plan-link" href="{{ route('getplan', $plan->id) }}">SEE MORE </a>
             </p>
             

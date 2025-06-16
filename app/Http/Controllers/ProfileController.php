@@ -38,15 +38,15 @@ class ProfileController extends Controller
         $user = $request->user();
         $user->fill($request->validated());
 
-        if ($request->hasFile('avatar')) {
-            // Delete old avatar if exists
-            if ($user->avatar) {
-                Storage::delete('public/' . $user->avatar);
+        if ($request->hasFile('profile_pict')) {
+            // Delete old profile_pict if exists
+            if ($user->profile_pict) {
+                Storage::delete('public/' . $user->profile_pict);
             }
             
-            // Store new avatar
-            $path = $request->file('avatar')->store('avatars', 'public');
-            $user->avatar = $path;
+            // Store new profile_pict
+            $path = $request->file('profile_pict')->store('profile_picts', 'public');
+            $user->profile_pict = $path;
         }
 
         if ($user->isDirty('email')) {

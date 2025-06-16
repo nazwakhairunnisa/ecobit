@@ -1,6 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+@if (session('success'))
+    <div class="w-full flex justify-center">
+        <div class="mb-4 px-4 py-3 w-120 flex items-center rounded bg-green-100 text-green-800 border border-green-300" style="font-family: 'Quicksand', sans-serif;">
+            {{ session('success') }}
+        </div>
+    </div>
+@endif
+@if (session('error'))
+    <div class="w-full flex justify-center">
+        <div class="mb-4 px-4 py-3 flex w-120 items-center rounded bg-red-100 text-red-800 border border-red-300" style="font-family: 'Quicksand', sans-serif;">
+            {{ session('error') }}
+        </div>
+    </div>
+@endif
 
    <!-- Content -->
 <main class="p-6">
@@ -10,8 +24,8 @@
 
         <!-- Plans to Finish -->
         <div class="flex flex-col items-center justify-center space-y-1">
-            <h2 class="text-lg font-bold text-[#19344f]" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
-                        style="text-shadow: 1px 1px 0 #94a3b8">ONGOING PLANS</h2>
+            <h2 class="text-xl text-[#19344f]" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
+                        style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;">ONGOING PLANS</h2>
             <div class="flex items-center justify-center ">
                 <img src="{{ asset('assets/img/ongoing.gif') }}" alt="Plans To Finish" class="w-40 md:w-45"  data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200" />
                 <div class="flex items-center justify-center -ml-8">
@@ -23,8 +37,8 @@
 
         <!-- Plans Completed -->
         <div class="flex flex-col items-center justify-center space-y-1">
-             <h2 class="text-lg font-bold text-[#19344f]" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
-                        style="text-shadow: 1px 1px 0 #94a3b8">COMPLETED PLANS</h2>
+             <h2 class="text-xl text-[#19344f]" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
+                        style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;">COMPLETED PLANS</h2>
             <div class="flex items-center justify-center ">
                 <img src="{{ asset('assets/img/complete.gif') }}" alt="Plans Completed" class="w-40 md:w-45" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200" />
                 <div class="flex items-center justify-center -ml-6">
@@ -37,8 +51,8 @@
 
         <!-- Daftar Rencana -->
         <div class="max-w-4xl mx-auto  border-gray-400 rounded-xl p-6">
-            <h2 class="text-lg font-bold text-[#19344f] mb-4"
-                    style="text-shadow: 1px 1px 0 #94a3b8">PLANS YOU NEED TO FINISH</h2>
+            <h2 class="text-xl text-[#19344f] mb-4"
+                    style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;">PLANS YOU NEED TO FINISH</h2>
 
             @if ($plans->isEmpty())
             <p class="text-gray-500">Belum ada plan yang diambil. Pilih plan di <a href="{{ route('plans') }}" class="text-blue-500">halaman Plan</a>!</p>
@@ -47,7 +61,8 @@
             @foreach ($plans as $plan)
             @if (!$plan->pivot->is_completed)
             <div class="border-2 border-gray-500 rounded-xl p-4 mb-10">
-                <div class="bg-[#eeeed4] font-bold text-[#4f8536] font-bold px-4 py-2 mb-4 rounded-xl inline-block">{{ $plan->title }}</div>
+                <div class="bg-[#eeeed4] font-bold text-[#4f8536] font-bold px-4 py-2 mb-4 rounded-xl inline-block"
+                style="font-family: 'Quicksand', sans-serif;">{{ $plan->title }}</div>
 
                 <!-- Checklist -->
                 <ul class="space-y-2 mb-6">
@@ -55,8 +70,11 @@
                     <li>
                         <form action="{{ route('step.complete', $step->userPlanSteps->first()->plan_step_id) }}" method="POST">
                             @csrf
-                            <input type="checkbox" class="checkbox" class="mr-2" {{ $step->userPlanSteps->first()->is_completed ? 'checked disabled' : '' }} 
-                            onchange="this.form.submit()" > {{ $step->title }}
+                            <label class="flex items-center" style="font-family: 'Quicksand', sans-serif;">
+                                <input type="checkbox" class="checkbox mr-2" 
+                                {{ $step->userPlanSteps->first()->is_completed ? 'checked disabled' : '' }} 
+                                onchange="this.form.submit()" > {{ $step->title }}
+                            </label>
                         </form>
                     </li>
                     @endforeach
@@ -84,8 +102,8 @@
 
         <!-- Daftar Completed Plans-->
         <div class="max-w-4xl mx-auto  border-gray-400 rounded-xl p-6">
-            <h2 class="text-lg font-bold text-[#19344f] mb-4"
-                    style="text-shadow: 1px 1px 0 #94a3b8">PLANS YOU AlREADY FINISH</h2>
+            <h2 class="text-xl text-[#19344f] mb-4"
+                    style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;">PLANS YOU AlREADY FINISH</h2>
 
             @if ($plans->where('pivot.is_completed', true)->isEmpty())
             <p class="text-gray-500">Belum ada plan yang selesai nih!</p>
@@ -97,7 +115,7 @@
                 <div class="bg-[#eeeed4] font-bold text-[#4f8536] font-bold px-4 py-2 mb-4 rounded-xl inline-block">{{ $plan->title }}</div>
 
                 <!-- Checklist (Read Only)-->
-                <ul class="space-y-2 mb-6">
+                <ul class="space-y-2 mb-6" style="font-family: 'Quicksand', sans-serif;">
                     @foreach ($plan->steps as $step)
                     <li>
                         <input type="checkbox" class="checkbox mr-2" checked disabled> {{ $step->title }}

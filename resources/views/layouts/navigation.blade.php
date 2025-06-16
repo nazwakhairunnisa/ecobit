@@ -1,5 +1,5 @@
 <nav class="navbar fixed top-0 z-100 m-0 p-0 overflow-visible">
-    <div class="navbar text-2xl bg-white/30 backdrop-blur-md border border-b-[#d8eedb] shadow-lg">
+    <div class="navbar text-2xl bg-white/30 backdrop-blur-md">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -19,13 +19,12 @@
                 </ul>
                 </div>
                 <a class="w-25 ml-4">
-                <!-- bg-white/30 backdrop-blur-md rounded-xl -->
                     <div class="logo-img">
                         <img src="{{ asset('assets/img/logo4.png') }}" alt="">
                     </div>
                 </a>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-center hidden lg:flex border border-1 rounded-full px-10">
                 <ul class="menu menu-horizontal w-full">
                 @guest
                     <li class="transition duration-300 hover:scale-110 mx-4"><a href="{{ route('landing') }}"  class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg"  style="font-family: 'Quicksand', sans-serif;">Home</a></li>
@@ -43,14 +42,13 @@
                 <a href="{{ route('register') }}" class="btn bg-[#172e45] text-white rounded-full px-10  style="font-family: 'Quicksand', sans-serif;">Sign Up</a>
             @else
                 <div class="dropdown dropdown-end">
-                <!-- bg-white/30 backdrop-blur-md rounded-xl px-2 py-6 -->
                     <div tabindex="0" role="button" class="btn btn-ghost avatar flex flex-row">
                         <div class="w-10 rounded-full">
-                            <img alt="User Avatar" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                            <img alt="User Avatar" src="{{ auth()->user()->profile_pict ? asset('storage/' . auth()->user()->profile_pict) : asset('images/default-profile.jpg') }}" />
                         </div>
-                        <!-- <h3 class="ml-2">Profile</h3> -->
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-green-300 rounded-box z-1 mt-3 w-30 p-2 shadow">
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-30 p-2 shadow"
+                    style="font-family: 'Quicksand', sans-serif;">
                         <li><a href="{{ route('profile.show') }}":active="request()->routeIs('profile.show')">Profile</a></li>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                     </ul>

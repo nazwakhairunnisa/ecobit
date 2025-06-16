@@ -6,7 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plan extends Model
 {
-    protected $fillable = ['focus_area_id', 'title', 'plan_details', 'image', 'video_url', 'trivia',];
+    protected $fillable = [
+        'focus_area_id', 
+        'title', 
+        'plan_details', 
+        'image', 
+        'video_url', 
+        'trivia',
+        'good_reasons',
+    ];
+
+    protected $casts = [
+        'good_reasons' => 'array', // Cast ke array untuk akses mudah
+    ];
 
     public function focusArea()
     {

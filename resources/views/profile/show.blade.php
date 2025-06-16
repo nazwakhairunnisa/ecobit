@@ -5,7 +5,7 @@
     <div class="flex flex-col items-center space-y-6">
         <!-- Profile Picture -->
         <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-[#103a57]">
-            <img src="{{ auth()->user()->avatar ? asset('storage/' . auth()->user()->avatar) : asset('images/default-profile.png') }}" 
+            <img src="{{ auth()->user()->profile_pict ? asset('storage/' . auth()->user()->profile_pict) : asset('images/default-profile.png') }}" 
                  alt="Profile Picture" class="w-full h-full object-cover">
         </div>
 
