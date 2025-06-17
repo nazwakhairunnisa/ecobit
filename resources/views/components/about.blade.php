@@ -6,28 +6,28 @@
       <div class="relative z-10  items-center justify-center mx-20">
         <div class="flex justify-center items-center mx-auto mt-20">
           <div class="mt-12 py-4 px-7 bg-[#172e45] text-[#d8eedb] rounded-2xl inline-block " data-aos="fade-left" data-aos-duration="1400" data-aos-delay="200">
-            <h1 class="text-5xl font-semibold" style="font-family: 'Fredoka', sans-serif;">ABOUT US</h1>
+            <h1 class="text-2xl md:text-5xl font-semibold" style="font-family: 'Fredoka', sans-serif;">ABOUT US</h1>
           </div>
         </div>
         <div class=" w-full flex flex-col lg:flex-row justify-between items-center px-8 lg:px-20 gap-10 mt-5">
 
           <div data-aos="zoom-in-right" data-aos-duration="1400" data-aos-delay="200">
-            <img src="{{ asset('assets/img/element1.png') }}" class="max-w-md"/>
+            <img src="{{ asset('assets/img/element1.png') }}" class="max-w-50 md:max-w-120"/>
           </div>
 
-            <div>
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
               <div data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">
                 <h2 class="text-[#19344f] font-semibold text-3xl lg:text-5xl mb-5 " 
                 style="font-family: 'Quicksand', sans-serif;">Who Are We?</h2>
               </div>
 
-            <p class="py-5 text-justify text-base text-lg" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
-            style="font-family: 'Quicksand', sans-serif;">
-            Kami adalah platform digital yang mengajak kamu untuk beraksi nyata 
-            menjaga lingkungan Lewat rencana-rencana kecil yang berdampak besar—
-            kamu bisa menghemat energi, menanam pohon, atau menggunakan 
-            transportasi ramah lingkungan dengan mudah dari satu tempat.
-            </p>
+              <p class="py-5 text-justify text-base text-lg" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
+              style="font-family: 'Quicksand', sans-serif;">
+              Kami adalah platform digital yang mengajak kamu untuk beraksi nyata 
+              menjaga lingkungan Lewat rencana-rencana kecil yang berdampak besar—
+              kamu bisa menghemat energi, menanam pohon, atau menggunakan 
+              transportasi ramah lingkungan dengan mudah dari satu tempat.
+              </p>
             </div>
         </div>
       </div>

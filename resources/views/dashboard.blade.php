@@ -10,7 +10,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-/* Responsive text tweaks */
+
 @media (max-width: 768px) {
   .card-body h2 {
     font-size: 1rem;
