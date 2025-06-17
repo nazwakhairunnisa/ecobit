@@ -24,18 +24,18 @@
 <!-- Header -->
 <div class="header min-h-screen w-full flex py-13 relative" style="background-image: url('{{ asset('assets/img/bg5.png') }}'); background-size: cover; background-position: center;">
     <div class="flex flex-col w-full mx-4 md:mx-20">
-        <h1 class="text-[#172e45] text-3xl md:text-5xl w-full md:w-250" style="font-family: 'Fredoka', sans-serif;">
+        <h1 class="text-[#172e45] text-3xl md:text-5xl w-full md:w-250" style="font-family: 'Fredoka', sans-serif; "data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">
             Every Bit of Action Creates a
             <span class="inline-block bg-[#e6f0e2] text-[#2e8125] px-3 py-1 rounded-xl">
                 Better
             </span>
             Planet
         </h1>
-        <img src="{{ asset('assets/img/element-6.png') }}" class="mt-5 px-4 md:px-12 overflow-visible" alt="">
-        <p class="pl-4 md:pl-24 pt-3 md:pt-5 text-base md:text-xl" style="font-family: 'Quicksand', sans-serif;">
+        <img src="{{ asset('assets/img/element-6.png') }}" class="mt-5 px-4 md:px-12 overflow-visible" alt="" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="300">
+        <p class="pl-4 md:pl-24 pt-3 md:pt-5 text-base md:text-xl" style="font-family: 'Quicksand', sans-serif;" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="400">
             Eco-Warriors! Start your journey with EcoBit today.
         </p>  
-        <div class="relative flex justify-center items-center mt-6 md:-mt-35 w-full">
+        <div class="relative flex justify-center items-center mt-6 md:-mt-35 w-full" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="500">
             <div class="absolute mt-4 md:right-0 top-0 z-10 w-72 md:w-80">
                 <div class="card bg-base-100 shadow-sm border border-black-300 rounded-3xl flex-shrink-0">
                     <img src="{{ asset('assets/img/qmark.png') }}" class="z-15 w-20 md:w-25 -mt-10 md:-mt-12" alt="">
@@ -56,7 +56,7 @@
 <!-- Recommendation Plan -->
 <div id="rec-plan" class="flex flex-col md:flex-row items-start justify-center my-20 mx-4 md:mx-15 gap-6">
     <div class="w-full md:w-1/4 flex flex-col items-center text-center md:text-left">
-        <h2 class="text-2xl md:text-3xl text-[#19344f]" style="font-family: 'Fredoka', sans-serif;">RECOMENDATION PLAN</h2>
+        <h2 class="text-2xl md:text-3xl text-[#19344f]" style="font-family: 'Fredoka', sans-serif;" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200">RECOMENDATION PLAN</h2>
         <div class="flex w-full justify-center md:justify-start gap-2 py-4">
             <button class="btn btn-lg bg-[#19344f] rounded-xl text-white text-xl" onclick="scrollCarousel(-1)">«</button>
             <button class="btn btn-lg bg-[#19344f] rounded-xl text-white text-xl" onclick="scrollCarousel(1)">»</button>
@@ -65,7 +65,7 @@
     <div class="w-full md:w-3/4 mt-6 md:mt-0">
         <div class="flex overflow-x-auto gap-6 scrollbar-hide">
             @forelse($recPlans as $plan)
-                <div class="card w-80 bg-base-100 image-full shadow-sm border border-black-300 flex-shrink-0">
+                <div class="card w-80 bg-base-100 image-full shadow-sm border border-black-300 flex-shrink-0" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">
                     <figure class="blur-xs" style="background-image: url('{{ $plan->image ? asset('storage/' .$plan->image) : asset('assets/img/banner.png') }}'); background-size: cover; background-position: center; width:100%; height:auto;">
                     </figure>
                     <div class="card-body">
@@ -95,10 +95,10 @@
 
 <!-- Articles -->
 <div class="my-30 px-4 md:px-20">
-    <h2 class="text-2xl md:text-3xl text-[#19344f] text-center mb-10" style="font-family: 'Fredoka', sans-serif;">OUR ARTICLES</h2>
+    <h2 class="text-2xl md:text-3xl text-[#19344f] text-center mb-10" style="font-family: 'Fredoka', sans-serif;" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">OUR ARTICLES</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach ($articles as $article)
-            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="300">
                 <img src="{{ $article->image ? asset('storage/' . $article->image) : asset('assets/img/banner.png') }}" alt="{{ $article->title }}" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <h3 class="text-lg font-semibold mb-2">

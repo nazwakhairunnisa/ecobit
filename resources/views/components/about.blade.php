@@ -24,7 +24,7 @@
               <p class="py-5 text-justify text-base text-lg" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
               style="font-family: 'Quicksand', sans-serif;">
               Kami adalah platform digital yang mengajak kamu untuk beraksi nyata 
-              menjaga lingkungan Lewat rencana-rencana kecil yang berdampak besar—
+              menjaga lingkungan Lewat rencana-rencana kecil yang berdampak besar.
               kamu bisa menghemat energi, menanam pohon, atau menggunakan 
               transportasi ramah lingkungan dengan mudah dari satu tempat.
               </p>
