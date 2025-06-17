@@ -44,7 +44,7 @@
                 <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn btn-ghost avatar flex flex-row">
                         <div class="w-10 rounded-full">
-                            <img alt="User Avatar" src="{{ auth()->user()->profile_pict ? asset('storage/' . auth()->user()->profile_pict) : asset('images/default-profile.jpg') }}" />
+                            <img alt="User Avatar" src="{{ auth()->user()->profile_pict ? asset('storage/' . auth()->user()->profile_pict) : asset('assets/img/default-profile.jpg') }}" />
                         </div>
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-300 rounded-box z-1 mt-3 w-30 p-2 shadow"
