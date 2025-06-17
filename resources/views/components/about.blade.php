@@ -12,12 +12,12 @@
         <div class=" w-full flex flex-col lg:flex-row justify-between items-center px-8 lg:px-20 gap-10 mt-5">
 
           <div data-aos="zoom-in-right" data-aos-duration="1400" data-aos-delay="200">
-            <img src="{{ asset('assets/img/element1.png') }}" class="max-w-md transform transition-transform duration-300 ease-in-out hover:scale-110 will-change-transform cursor-default"/>
+            <img src="{{ asset('assets/img/element1.png') }}" class="max-w-md"/>
           </div>
 
             <div>
               <div data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">
-                <h2 class="text-[#19344f] font-semibold text-3xl lg:text-5xl mb-5  transform transition-transform duration-300 ease-in-out hover:scale-110 will-change-transform cursor-default" 
+                <h2 class="text-[#19344f] font-semibold text-3xl lg:text-5xl mb-5 " 
                 style="font-family: 'Quicksand', sans-serif;">Who Are We?</h2>
               </div>
 
