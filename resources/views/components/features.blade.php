@@ -13,8 +13,8 @@
                     class="rounded-xl w-60 z-30 -mt-36" />
                 </div>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title" style="font-family: 'Quicksand', sans-serif;">Card Title</h2>
-                    <p style="font-family: 'Quicksand', sans-serif;">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <h2 class="card-title" style="font-family: 'Quicksand', sans-serif;">Create Your Eco Plan</h2>
+                    <p style="font-family: 'Quicksand', sans-serif;">Mulai langkah kecilmu dengan membuat rencana sendiri. Tambahkan aksi-aksi sederhana yang bisa kamu lakukan untuk bantu bumi.</p>
                 </div>
             </div>
             </div>
@@ -28,8 +28,8 @@
                     class="rounded-xl w-60 z-30 -mt-36" />
                 </div>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title" style="font-family: 'Quicksand', sans-serif;">Card Title</h2>
-                    <p style="font-family: 'Quicksand', sans-serif;">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <h2 class="card-title" style="font-family: 'Quicksand', sans-serif;">Explore Articles</h2>
+                    <p style="font-family: 'Quicksand', sans-serif;">Temukan berbagai rencana dan artikel seputar gaya hidup ramah lingkungan. Baca, pelajari, dan mulai bertindak.</p>
                 </div>
             </div>
             </div>

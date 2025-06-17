@@ -20,28 +20,31 @@
         &lt;
     </button>
 
-    <div id="faq-carousel" class="flex gap-4 sm:gap-8 md:gap-15 overflow-visible w-full max-w-[320px] sm:max-w-[600px] md:max-w-[900px] justify-center items-center">
-        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
+    <div id="faq-carousel" class="flex gap-4 sm:gap-8 md:gap-15 overflow-visible w-full max-w-[320px] sm:max-w-[600px] md:max-w-[900px] justify-center items-center" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="300">
+        
+        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-500 ease-in-out">
             <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Apa itu EcoBit?"</h2>
-            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">EcoBit adalah platform untuk membangun kebiasaan ramah lingkungan secara bertahap.</p>
+            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">EcoBit adalah platform edukatif yang bantu kamu memulai gaya hidup ramah lingkungan lewat rencana aksi sederhana dan artikel inspiratif.</p>
         </div>
-        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
+
+        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-500 ease-in-out">
             <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Bagaimana cara mulai menggunakan EcoBit?"</h2>
             <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">Cukup daftar, pilih rencana, dan mulai lakukan langkah-langkah kecil setiap hari.</p>
         </div>
-        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
-            <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Apakah EcoBit gratis?"</h2>
-            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">Ya, EcoBit dapat digunakan secara gratis oleh siapa saja.</p>
+
+        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-500 ease-in-out">
+            <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Apa beda rencana saya dan artikel yang tersedia?"</h2>
+            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">Plan bisa kamu buat sesuai minat, sedangkan artikel berisi edukasi & tips untuk bantu kamu lebih peduli lingkungan.</p>
         </div>
 
-        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
-            <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Apakah EcoBit gratis?"</h2>
-            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">Ya, EcoBit dapat digunakan secara gratis oleh siapa saja.</p>
+        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-500 ease-in-out">
+            <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Apakah EcoBit hanya untuk orang yang sudah aktif peduli lingkungan?"</h2>
+            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">EcoBit justru dibuat buat kamu yang baru mau mulai. Semua langkah kecil kamu dihitung di sini.</p>
         </div>
 
-        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
-            <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Apakah EcoBit gratis?"</h2>
-            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">Ya, EcoBit dapat digunakan secara gratis oleh siapa saja.</p>
+        <div class="faq-card bg-white border border-black rounded-3xl p-4 sm:p-6 text-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] max-w-[190px] sm:max-w-[220px] md:max-w-[250px] h-[200px] sm:h-[220px] md:h-[250px] transition-all duration-500 ease-in-out">
+            <h2 class="text-sm sm:text-base md:text-lg text-[#172e45] italic mb-2 sm:mb-4" style="font-family: 'Quicksand', sans-serif;">"Saya mau update atau hapus plan, bisa tidak?"</h2>
+            <p class="text-gray-700 text-xs sm:text-sm md:text-base" style="font-family: 'Quicksand', sans-serif;">Bisa, kamu tinggal masuk ke halaman My Plan lalu update atau hapus plan yang sudah kamu buat.</p>
         </div>
     </div>
 

@@ -11,9 +11,9 @@
 
         <p class="text-lg sm:text-xl md:text-2xl text-center md:text-right text-gray-700" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="200"
         style="font-family: 'Quicksand', sans-serif;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, turpis et tincidunt pretium, 
-        urna orci cursus enim, vel dapibus nisl nisi vel erat. Suspendisse potenti. 
-        Donec euismod justo nec justo tincidunt, vel malesuada mauris bibendum.
+        Sekecil apa pun kontribusimu hari ini, dampaknya bisa sangat besar untuk esok.
+        terima kasih karena sudah ikut menjaga bumi, karena semua perubahan besar
+        selalu dimulai dari satu langkah kecil.
         </p>
     </div>
     </div>

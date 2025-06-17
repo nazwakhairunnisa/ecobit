@@ -8,13 +8,13 @@
                 <ul tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                     @guest
-                    <li><a href="{{ route('landing') }}" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
-                    <li><a href="#about" style="font-family: 'Quicksand', sans-serif;">Features</a></li>
-                    <li><a href="#features" style="font-family: 'Quicksand', sans-serif;">About</a></li>
+                    <li><a href="{{ route('landing') }}" class="hover:text-[#4f8536]" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
+                    <li><a href="#about" class="hover:text-[#4f8536]" style="font-family: 'Quicksand', sans-serif;">Features</a></li>
+                    <li><a href="#features" class="hover:text-[#4f8536]" style="font-family: 'Quicksand', sans-serif;">About</a></li>
                     @else
-                    <li><a href="{{ route('dashboard') }}" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
-                    <li><a href="/plan" style="font-family: 'Quicksand', sans-serif;">Plan</a></li>
-                    <li><a href="/myplan" style="font-family: 'Quicksand', sans-serif;">My Plan</a></li>
+                    <li><a href="{{ route('dashboard') }}" class="hover:text-[#4f8536]" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
+                    <li><a href="/plan" class="hover:text-[#4f8536]" style="font-family: 'Quicksand', sans-serif;">Plan</a></li>
+                    <li><a href="/myplan" class="hover:text-[#4f8536]" style="font-family: 'Quicksand', sans-serif;">My Plan</a></li>
                     @endguest
                 </ul>
                 </div>
@@ -31,9 +31,9 @@
                     <li class="transition duration-300 hover:scale-110 mx-4"><a href="#features" class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg"  style="font-family: 'Quicksand', sans-serif;">Features</a></li>
                     <li class="transition duration-300 hover:scale-110 mx-4"><a href="#about" class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg"  style="font-family: 'Quicksand', sans-serif;">About</a></li>
                 @else
-                    <li class="mx-4"><a href="{{ route('dashboard') }}" class="text-base" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
-                    <li class="mx-4"><a href="/plan" class="text-base" style="font-family: 'Quicksand', sans-serif;">Plan</a></li>
-                    <li class="mx-4"><a href="/myplan" class="text-base" style="font-family: 'Quicksand', sans-serif;">My Plan</a></li>
+                    <li class="transition duration-300 hover:scale-110 mx-4"><a href="{{ route('dashboard') }}" class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg" style="font-family: 'Quicksand', sans-serif;">Home</a></li>
+                    <li class="transition duration-300 hover:scale-110 mx-4"><a href="/plan" class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg" style="font-family: 'Quicksand', sans-serif;">Plan</a></li>
+                    <li class="transition duration-300 hover:scale-110 mx-4"><a href="/myplan" class="hover:border border-[#d8eedb] rounded-full hover:text-[#4f8536] text-lg" style="font-family: 'Quicksand', sans-serif;">My Plan</a></li>
                 @endguest
                 </ul>
             </div>

@@ -4,13 +4,13 @@
 <div class="max-w-3xl mx-auto p-6">
     <div class="flex flex-col items-center space-y-6">
         <!-- Profile Picture -->
-        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-[#103a57]">
+        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-[#103a57]" data-aos="fade-down" data-aos-duration="1400" data-aos-delay="200">
             <img src="{{ auth()->user()->profile_pict ? asset('storage/' . auth()->user()->profile_pict) : asset('images/default-profile.png') }}" 
                  alt="Profile Picture" class="w-full h-full object-cover">
         </div>
 
         <!-- Profile Information -->
-        <div class="w-full bg-white rounded-xl shadow-sm p-8 space-y-6">
+        <div class="w-full bg-white rounded-xl shadow-sm p-8 space-y-6" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">
             <!-- <div class="space-y-2">
                 <label for="username" class="block text-sm font-medium text-[#172e45]">Username</label>
                 <input type="text" id="username" value="{{ auth()->user()->username }}" 

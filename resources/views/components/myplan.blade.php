@@ -51,25 +51,25 @@
     <!-- Daftar Rencana -->
     <div class="max-w-4xl mx-auto rounded-xl p-4 sm:p-6">
         <h2 class="text-lg sm:text-xl text-[#19344f] mb-4"
-            style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;">PLANS YOU NEED TO FINISH</h2>
+            style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">PLANS YOU NEED TO FINISH</h2>
 
             @php
                 $allCompleted = $plans->count() > 0 && $plans->every(fn($plan) => $plan->pivot->is_completed);
             @endphp
 
             @if ($allCompleted)
-                <div class="text-center my-8 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 font-semibold" style="font-family: 'Quicksand', sans-serif;">
+                <div class="text-center my-8 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 font-semibold" style="font-family: 'Quicksand', sans-serif;" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">
                     Semua plan telah diselesaikan! 🎉<br>
                     Silakan tambahkan plan lagi di <a href="{{ route('plans') }}" class="text-blue-600 underline">halaman Plan</a>.
                 </div>
             @endif
 
         @if ($plans->isEmpty())
-            <p class="text-gray-500">Belum ada plan yang diambil. Pilih plan di <a href="{{ route('plans') }}" class="text-blue-500">halaman Plan</a>!</p>
+            <p class="text-gray-500" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">Belum ada plan yang diambil. Pilih plan di <a href="{{ route('plans') }}" class="text-blue-500">halaman Plan</a>!</p>
         @else
             @foreach ($plans as $plan)
                 @if (!$plan->pivot->is_completed)
-                    <div class="border-2 border-gray-500 rounded-xl p-4 mb-10">
+                    <div class="border-2 border-gray-500 rounded-xl p-4 mb-10" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="300">
                         <div class="bg-[#eeeed4] font-bold text-[#4f8536] px-4 py-2 mb-4 rounded-xl inline-block"
                             style="font-family: 'Quicksand', sans-serif;">{{ $plan->title }}</div>
 
@@ -112,14 +112,14 @@
     <!-- Completed Plans -->
     <div class="max-w-4xl mx-auto rounded-xl p-4 sm:p-6 mt-6">
         <h2 class="text-lg sm:text-xl text-[#19344f] mb-4"
-            style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;">PLANS YOU ALREADY FINISH</h2>
+            style="text-shadow: 1px 1px 0 #94a3b8; font-family: 'Fredoka', sans-serif;" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="200">PLANS YOU ALREADY FINISH</h2>
 
         @if ($plans->where('pivot.is_completed', true)->isEmpty())
-            <p class="text-gray-500">Belum ada plan yang selesai nih!</p>
+            <p class="text-gray-500" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">Belum ada plan yang selesai nih!</p>
         @else
             @foreach ($plans as $plan)
                 @if ($plan->pivot->is_completed)
-                    <div class="border-2 border-gray-500 rounded-xl p-4 mb-10">
+                    <div class="border-2 border-gray-500 rounded-xl p-4 mb-10" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="300">
                         <div class="bg-[#eeeed4] font-bold text-[#4f8536] px-4 py-2 mb-4 rounded-xl inline-block">{{ $plan->title }}</div>
 
                         <!-- Checklist (Read Only) -->
