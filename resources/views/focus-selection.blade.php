@@ -23,7 +23,7 @@
     <!-- Konten utama, tanpa kotak pembatas, lebih lebar -->
     <div class="w-full max-w-5xl mx-auto px-4 py-8 mt-10">
         <!-- Judul -->
-        <h1 class="text-center text-2xl font-extrabold mb-8 text-[#0f172a] drop-shadow-lg leading-relaxed"
+        <h1 class="text-center text-2xl mb-8 text-[#0f172a] leading-relaxed" 
             HALO!<br>
             Kamu pengen mulai dari perubahan kecil yang bisa berdampak ke iklim? Yuk pilih fokus kamu!
         </h1>
@@ -33,7 +33,7 @@
             <input type="hidden" name="focus" id="focus-input">
 
             @foreach ($focusAreas as $focus)
-            <label class="focus-checkbox w-full rounded-xl py-4 px-8 bg-white hover:bg-[#e0f2fe] transition-all duration-200 text-lg shadow-sm flex items-center cursor-pointer">
+            <label class="focus-checkbox w-full rounded-xl py-4 px-8 bg-white hover:bg-[#d8eedb] transition-all duration-200 text-lg shadow-sm flex items-center cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 will-change-transform cursor-default">
                     <input
                         type="checkbox"
                         name="focus_areas[]"
@@ -51,7 +51,7 @@
             @enderror
 
             <div class="flex justify-end pt-6">
-                <button type="submit" class="bg-[#0f172a] text-white px-8 py-3 rounded-full hover:bg-[#1e293b] transition font-bold text-lg shadow-md">
+                <button type="submit" class="bg-[#172e45] text-[#d8eedb] px-8 py-3 rounded-full transition-transform duration-300 ease-in-out hover:scale-105 will-change-transform cursor-default transition font-bold text-lg shadow-md">
                     CONFIRM
                 </button>
             </div>
@@ -62,10 +62,10 @@
         function toggleCheckbox(checkbox) {
             const label = checkbox.parentElement;
             if (checkbox.checked) {
-                label.classList.add('bg-[#D6E9D0]', 'font-bold', 'ring-2', 'ring-[#0f172a]');
+                label.classList.add('bg-[#d8eedb]', 'ring-2', 'ring-[#0f172a]');
                 label.classList.remove('bg-white');
             } else {
-                label.classList.remove('bg-[#D6E9D0]', 'font-bold', 'ring-2', 'ring-[#0f172a]');
+                label.classList.remove('bg-[#d8eedb]', 'ring-2', 'ring-[#0f172a]');
                 label.classList.add('bg-white');
             }
         }

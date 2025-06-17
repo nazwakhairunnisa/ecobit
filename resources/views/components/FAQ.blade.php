@@ -21,25 +21,25 @@
             </button>
 
             <div id="faq-carousel" class="flex gap-15 overflow-visible w-[900px] justify-center items-center">
-                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out">
+                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
                     <h2 class="text-lg text-[#172e45] italic mb-4" style="font-family: 'Quicksand', sans-serif;">"Apa itu EcoBit?"</h2>
                     <p class="text-gray-700" style="font-family: 'Quicksand', sans-serif;">EcoBit adalah platform untuk membangun kebiasaan ramah lingkungan secara bertahap.</p>
                 </div>
-                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out">
+                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
                     <h2 class="text-lg text-[#172e45] italic mb-4" style="font-family: 'Quicksand', sans-serif;">"Bagaimana cara mulai menggunakan EcoBit?"</h2>
                     <p class="text-gray-700" style="font-family: 'Quicksand', sans-serif;">Cukup daftar, pilih rencana, dan mulai lakukan langkah-langkah kecil setiap hari.</p>
                 </div>
-                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out">
+                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
                     <h2 class="text-lg text-[#172e45] italic mb-4" style="font-family: 'Quicksand', sans-serif;">"Apakah EcoBit gratis?"</h2>
                     <p class="text-gray-700" style="font-family: 'Quicksand', sans-serif;">Ya, EcoBit dapat digunakan secara gratis oleh siapa saja.</p>
                 </div>
 
-                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out">
+                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
                     <h2 class="text-lg text-[#172e45] italic mb-4" style="font-family: 'Quicksand', sans-serif;">"Apakah EcoBit gratis?"</h2>
                     <p class="text-gray-700" style="font-family: 'Quicksand', sans-serif;">Ya, EcoBit dapat digunakan secara gratis oleh siapa saja.</p>
                 </div>
 
-                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out">
+                <div class="faq-card bg-white border border-black rounded-3xl p-6 text-center min-w-[200px] max-w-[250px] h-[250px] transition-all duration-300 ease-in-out" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="500">
                     <h2 class="text-lg text-[#172e45] italic mb-4" style="font-family: 'Quicksand', sans-serif;">"Apakah EcoBit gratis?"</h2>
                     <p class="text-gray-700" style="font-family: 'Quicksand', sans-serif;">Ya, EcoBit dapat digunakan secara gratis oleh siapa saja.</p>
                 </div>
