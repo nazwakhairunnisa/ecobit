@@ -26,7 +26,7 @@
     <!-- Logo -->
     <nav class="absolute top-0 left-0 w-full z-20 flex items-center justify-between px-8 py-4 bg-transparent fixed top-0 left-0 z-50">
         <div>
-            <img src="{{ asset('assets/img/logo.png') }}" alt="ECOBIT Logo" class="h-12">
+            <img src="{{ asset('assets/img/logo4.png') }}" alt="ECOBIT Logo" class="h-12">
         </div>
     </nav>
 

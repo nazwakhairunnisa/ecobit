@@ -48,4 +48,5 @@ document.getElementById('profile_pict').addEventListener('change', function(even
     }
 });
 </script>
+<script src="//unpkg.com/alpinejs" defer></script>
 @endsection

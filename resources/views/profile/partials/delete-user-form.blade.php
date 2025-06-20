@@ -1,3 +1,9 @@
+<style>
+.absolute.inset-0.bg-gray-500.opacity-75 {
+    display: none !important;
+}
+</style>
+
 <section class="space-y-6">
     <p class="text-sm text-gray-600 mb-6">
         Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.
@@ -39,8 +45,8 @@
                     {{ __('Cancel') }}
                 </x-secondary-button>
 
-                <x-danger-button class="ms-3">
-                    {{ __('Delete Account') }}
+                <x-danger-button type="submit" class="ms-3">
+                    {{ __('KLIK ENTER ON YOUR KEYBOARD TO DELETE ACCOUNT') }}
                 </x-danger-button>
             </div>
         </form>
